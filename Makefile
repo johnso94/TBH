@@ -1,9 +1,9 @@
 OPTS = -Wall -g -std=c++11
 
-all:  demo
+all:  proto-draw-inbrowser
 
-demo: demo.cpp Shape.o Circle.o Rectangle.o
-	g++ $(OPTS) -o a.out demo.cpp Shape.o Circle.o Rectangle.o sd_fun.o str_util.o -lm
+proto-draw-inbrowser: proto-draw-inbrowser.cpp Shape.o Circle.o Rectangle.o
+	g++ $(OPTS) -o a.out proto-draw-inbrowser.cpp Shape.o Circle.o Rectangle.o sd_fun.o str_util.o -lm
 
 Shape.o: Shape.cpp Shape.h
 	g++ $(OPTS) -c Shape.cpp
