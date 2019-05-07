@@ -1,0 +1,13 @@
+Player
+    - Stats
+        - Str 10
+        - Hp 10
+        - Def 10
+    - Items
+        - Longsword
+        - Bronze helm
+    Progression
+        - 1
+        - 2
+        - 3
+        - 5
