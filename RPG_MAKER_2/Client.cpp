@@ -1,158 +1,183 @@
 #include "Client.h"
+#include"sd_fun.h"
 
 void Client::run()
 {
-    while (1)
-    {
-        string current_event = get_current_location();
-        string current_event_type = get_event_type(current_event);
-        string event_info = get_event_info(current_event);
-        // string get_player_info = 
-        vector<string> event_info_lines = split(event_info,'-');
-        trim_off_whitespaces(event_info_lines);
+    // 1. Get current event
+    // 2. Get progress
+    // 3. Get text of current event at progress
+    string current_event = get_current_location();
+    int progress = get_current_event_progress(current_event);
+    string current_event_type = get_event_type(current_event);
+    string event_info = get_event_info(current_event,progress);
+    vector<string> event_info_lines = split(event_info,'-');
+    trim_off_whitespaces(event_info_lines);
 
-        if(current_event_type == "NAV")
-            navigation(event_info_lines);
-        else if(current_event_type == "SELECT")
-            select(event_info_lines);
-        else if(current_event_type == "COMBAT")
-            combat(event_info_lines);
-    }
+    if(current_event_type == "NAV")
+        navigation(event_info_lines);
 }
-
-int Client::get_user_input(string event_text,int min,int max)
-{
-    int user_input = 0;
-    while (1)
-    {
-        event_text += "\n<< ";
-        clear_screen();
-        cout << event_text;
-        cin >> user_input;
-        if (user_input < min || user_input > max)
-        {
-            event_text += "Invalid Input";
-        }
-        else
-            break;
-    }
-    return user_input;
-}
-
 
 void Client::navigation(vector<string> event_info)
 {
     string navigation_text = "";
     vector<pair<string, string>> locations_in_reach = get_nearby_locations();
 
-    if(event_info.size() > 1)
-        navigation_text += event_info[2] + "\n";
-
+    if(event_info.size() > 0)
+        navigation_text += event_info[0] + "\n";
 
     for (unsigned int i = 0; i < locations_in_reach.size(); i++)
     {
-        if (i == 0)
+        if(i != 0)
+        {
+            string display_text = locations_in_reach[i].second;
+            if(display_text[0] == '@' || display_text[0] == '#')
+                display_text = display_text.substr(1);
+            navigation_text += "[" + to_string(i) + "] " + display_text + "\n";
+        }
+        else
         {
             navigation_text += "\n###########" + locations_in_reach[0].first + "##############\n";
         }
-        else
-        {
-            navigation_text += "[" + to_string(i) + "] " + locations_in_reach[i].second + "\n";
-        }
     }
+    vector<string> actions;
+    for(auto elem : locations_in_reach)
+        actions.push_back(elem.first);
+    next_actions(actions,navigation_text);
 
-    int user_input = get_user_input(navigation_text,1,locations_in_reach.size()-1);
-    string current_location = locations_in_reach[user_input].first;
-    write_current_location_to_txt(current_location);
 }
 
-void Client::select(vector<string> event_info)
+void Client::next_actions(vector<string> nearby_locations,string event_text)
 {
-    string select_text = "";
+    cout << event_text << "\n";
+    string text_str = "";
+    int num_of_actions = nearby_locations.size();
+    text_str += to_string(num_of_actions) + "\n";
+    for(auto elem : nearby_locations)
+        text_str += elem + "\n";
 
-    for(auto elem : event_info)
-        if(elem != event_info.back())
-            select_text += elem + "\n";
-        else
-            select_text += "[1] Back\n";
-
-
-    get_user_input(select_text,1,1);
-    string current_location = event_info.back();
-    write_current_location_to_txt(current_location);
-}
-
-
-
-
-void Client::combat(vector<string> event_info)
-{
-    string combat_text = "";
-    
-
-    for(auto elem : event_info)
-        if(elem != event_info.back())
-            combat_text += elem + "\n";
-        else
-            combat_text += "[1] Back\n";
-
-
-    get_user_input(combat_text,1,1);
-    string current_location = event_info.back();
-    write_current_location_to_txt(current_location);
+    ofstream file_out("Next_Actions.txt");
+    if(file_out.is_open())
+    {
+        file_out << text_str;
+        file_out.close();
+    } 
+    else
+        cout << "couldn't find Next_Actions.txt" << "\n";
 }
 
 
 
 
-string Client:: get_player_info()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+pair<string,int> Client::get_str_and_int(string str)
 {
+    pair<string,int> str_and_int;
+    size_t last_space = str.find_first_of(' ');
+    str_and_int.first = str.substr(0,last_space);
+    str_and_int.second = stoi(str.substr(last_space));
+    return str_and_int;
+}
+
+int Client::get_current_event_progress(string current_event)
+{
+    fstream file("progression.txt");
     string line;
-    ifstream file("Player.txt");
-    string player_info = "";
-    bool get_lines = false;
-    size_t pos_colon;
-    if (file.is_open())
+    string file_str = "";
+    bool found;
+    int progress = 1;
+    if(file.is_open())
     {
         while(getline(file,line))
         {
-            player_info += line;
+            file_str += line + "\n";
+            size_t last_space = line.find_last_of(' ');
+            string event = line.substr(0,last_space);
+            if(event == current_event)
+            {
+                found = true;
+                progress = stoi(line.substr(last_space));
+            }
         }
-    } else {
-        cout << "couldn't find Event_Info.txt\n";
-    }
-    return player_info;
+        if(!found)
+        {
+            file_str += current_event + " 1";
+            ofstream file_out("progression.txt");
+            file_out << file_str;
+            file_out.close();
+        }
+    } 
+    else 
+        cout << "progression.txt was not found\n";
+    return progress;
 }
 
 
 
-string Client::get_event_info(string current_event){
+bool Client::is_int(char c)
+{
+    return (c >= 48 && c <= 57);
+}
+
+string Client::get_event_info(string current_event,int progress)
+{
     string line;
     ifstream file("Event_Info.txt");
     string event_info = "";
-    bool get_lines = false;
-    size_t pos_colon;
+    bool get_event_info = false;
+    size_t open_paren_pos;
     if (file.is_open())
     {
         while(getline(file,line))
         {
-            if(get_lines && !line.size())
+            if(get_event_info && line.size() == 0)
                 break;
-            if(!get_lines)
+            if(!get_event_info)
             {
-                pos_colon = line.find(':');
-                if(pos_colon != string::npos)
+                open_paren_pos = line.find('(');
+                if(open_paren_pos != string::npos)
                 {
-                    if(current_event == line.substr(0,pos_colon-1))
-                    {
-                        event_info += line;
-                        get_lines = true;
-                    }
+                    string event = line.substr(open_paren_pos+1,current_event.size());
+                    if(event == current_event)
+                        get_event_info = true;
                 }
-            } 
-            else if(get_lines)
+            }
+            else if(get_event_info)
             {
-                event_info += line;
+                trim_off_whitespaces_str(line);
+                if(line[0]-48 == progress)
+                {
+                    size_t period_pos = line.find('.');
+                    line = line.substr(period_pos+1);
+                    event_info = line;
+                    break;
+                }
             }
         }
     } else {
@@ -160,8 +185,6 @@ string Client::get_event_info(string current_event){
     }
     return event_info;
 }
-
-
 
 vector<string> Client::split(string str, char char_to_split_by)
 {
@@ -189,6 +212,13 @@ void Client::trim_off_whitespaces(vector<string> &v)
             elem = elem.substr(1);
     }
 }
+void Client::trim_off_whitespaces_str(string &str)
+{
+    while(str.back() == ' ')
+        str.pop_back();
+    while(str.front() == ' ')
+        str = str.substr(1);
+}
 
 
 string Client::get_event_type(string current_event)
@@ -196,21 +226,18 @@ string Client::get_event_type(string current_event)
     string line;
     ifstream file("Event_Info.txt");
     string event_type = "NAV";
-    size_t pos_colon;
     if (file.is_open())
     {
         while(getline(file,line))
         {
-            if(line == "__END__")
-                break;
-            pos_colon = line.find(':');
-            if(pos_colon != string::npos)
+            size_t open_paren = line.find('(');
+            if(open_paren != string::npos)
             {
-                if(current_event == line.substr(0,pos_colon-1))
+                string event = line.substr(open_paren+1,current_event.size());
+                if(current_event == event)
                 {
-                    while(line.back() == ' ')
-                        line.pop_back();
-                    event_type = line.substr(pos_colon+2);
+                    size_t first_space = line.find(' ');
+                    event_type = line.substr(0,first_space);
                     break;
                 }
             }
@@ -342,8 +369,14 @@ vector<pair<string, string>> Client::get_nearby_locations()
     int current_location_tabs = 0;
     int num_of_tabs;
     int back;
+    bool insert_back = true;
     if(current_location[0] == '@')
         current_location = current_location.substr(1);
+    if(current_location[0] == '#')
+    {
+
+        insert_back = false;
+    }
     for (unsigned int i = 0; i < World_Map.size(); i++)
     {
         if (!get_nearby_locations)
@@ -356,7 +389,7 @@ vector<pair<string, string>> Client::get_nearby_locations()
                 current_location_tabs = count_tabs(World_Map[i]);
                 get_nearby_locations = true;
             }
-            if (current_location_tabs)
+            if (current_location_tabs && insert_back)
             {
                 back = i;
                 while (count_tabs(World_Map[back]) >= current_location_tabs)
@@ -371,7 +404,7 @@ vector<pair<string, string>> Client::get_nearby_locations()
             num_of_tabs = count_tabs(World_Map[i]);
             if (current_location_tabs == num_of_tabs || current_location_tabs - 1 == num_of_tabs || num_of_tabs == 0)
             {
-                if (current_location_tabs != 0)
+                if (current_location_tabs != 0 && insert_back)
                 {
                     temp_pair.first = get_location_name(back_location);
                     temp_pair.second = "Back";

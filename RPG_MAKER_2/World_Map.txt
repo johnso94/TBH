@@ -7,7 +7,7 @@ Universe
             The Shallows                                    
             The Danger          
         Blood Cave                     
-            The Monster                                                                                                                                                                                               
+            The Monster
             The Darkness                                                                                                                                                     
             The Narrow edge                                                                                                                                                                                                                         
         Dryied Underground                                                                           
@@ -15,7 +15,8 @@ Universe
             The humiliated                                                                                                                                                                                      
         Flourishing Bushes                                                                                                                                                             
     Yellow Star                                                                                                                                                                                  
-        Glowing Alleys                                                                                                     
+        Glowing Alleys
+            Place in Glowing Alleys                                                                                                     
         Bright Grasslands                                                                                                     
         Blinding Canions                                                                                                    
     Blue Star                                                                                                     
@@ -27,17 +28,23 @@ Universe
         Purple flowers                                                                                                                      
         Purple fields                                                                                                                               
         purple daisies  
-            1 
-                2
-                    3
-                        4
+            #1 
+                #2
+                    #3
+                        #4
                             5
+                            Universe
                                 6
                                     7
                                         8
                                             9
-    @Jem               + Go to Jem            
-    Goblin                                         
+                                                10
+                                                    11
+                                                        12
+                                                            13
+                                                                14
+    @Jem                          
+    Goblin                                      
 
 
 
@@ -46,7 +53,7 @@ Jem
     glow monster                                      
         glow alot                                      
             lots of Glowing
-    @Universe                                                             
+    @Universe                                               
 
 
 
