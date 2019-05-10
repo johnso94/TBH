@@ -32,12 +32,21 @@ def get_top_key(key, yaml):
   res = res[:pos2]
   return res
 
+def load_binary(filename):
+    with open(filename, 'rb') as fh:
+        return fh.read()
+
 class S(BaseHTTPRequestHandler):
-    def _set_headers(self):
+    def _set_headers(self, content):
         self.send_response(200)
-        self.send_header('Content-type', 'text/html')
+        self.send_header('Content-type', content)
         self.send_header('Access-Control-Allow-Origin', '*')
         self.end_headers()
+
+    def do_GET(self):
+        if self.path.endswith(".png"):
+           self._set_headers('image/png')
+           self.wfile.write(load_binary(self.path[1:]))
         
     def do_POST(self):
         content_length = int(self.headers['Content-Length'])
@@ -75,7 +84,7 @@ class S(BaseHTTPRequestHandler):
           if len(stderr) > 0:
             outgoing_data = 'stderr: ' + stderr + chr(0) + outgoing_data
             print >> sys.stderr, stderr
-        self._set_headers()
+        self._set_headers('text/html')
         self.wfile.write(outgoing_data)
         exe_mtime = new_mtime
 
