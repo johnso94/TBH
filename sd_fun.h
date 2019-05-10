@@ -2,6 +2,8 @@
 #define _SD_FUN_
 #include<cstddef>
 #include<cstdlib>
+#include<climits>
+#include<map>
 
 struct Range {
   int pos, len;
@@ -22,6 +24,13 @@ public:
 	bool operator!=(const irange&) const { return curr < last; }
 	void operator++() { ++curr; }
 	int operator*() const { return curr; }
+};
+
+struct c_or_i {
+  const char *c;
+  int i;
+  c_or_i(const char *_c) : c(_c), i(INT_MIN) {}
+  c_or_i(int _i) : i(_i) {}
 };
 
 extern char *mem, *yaml, *query_str, *response;
@@ -76,6 +85,8 @@ extern void append(char *s, const char *pre, long long n, const char *post="");
 extern void append(char *s, const char *pre, std::size_t n, const char *post="");
 extern void append(char *s, const char *pre, double d, const char *post="");
 
+extern void add_yaml(const char *fname, std::map<std::string, c_or_i> m = {});
+
 extern int index_of(const char *s, Range r, const char *query);
 extern int index_of(const char *s, int start, const char *query);
 extern int index_of(const char *s, const char *query);
@@ -85,6 +96,8 @@ extern bool in(const char *s, int start, const char *query);
 extern bool in(const char *s, Range r, const char *query);
 extern bool was_pressed(const char *s, const char *query);
 extern bool was_pressed(const char *s, const char *query, int i);
+extern int was_picked(const char *s, const char *query);
+extern int was_picked(const char *s, const char *query, int i);
 extern int touch_pos_x(const char *s);
 extern int touch_pos_y(const char *s);
 extern int touch_start_pos_x(const char *s);
