@@ -1,0 +1,5 @@
+Image_{id}:
+  name: {im}
+  style:
+    width: {w}
+    height: {h}
