@@ -1,38 +1,15 @@
 
-Universe : NAV
-    - Text
-        - Universe placeholder text1
-        - Univsere placeholder text2
-        - Universe placeholder text3
+NAV (Universe)
+    1. Univere Test for progression state 1
 
-Yellow Star : NAV
-    -Text
-        - Yello Star Place holder text
-    
+NAV (Red Star)
+    1. Red Star Text for progression state 1
+
+NAV (Purple Star)
+    1. Purple Star Test for progression 1
 
 
 
-Red Star : SELECT
-    - Monsters
-        - Goblin 20
-        - Skeleton 50
-        - Deamon 30
-    - Universe
 
 
 
-Goblin : COMBAT
-    - Stats
-        - Str 10
-        - Def 20
-        - Atk 30
-        - Hp 50
-    - Items
-        - Longsword
-        - Bronze Helm
-        - Coins
-        - grapes
-    - Universe
-
-
-__END__
