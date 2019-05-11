@@ -1,12 +1,18 @@
 
 NAV (Universe)
-    1. Univere Test for progression state 1
+    1. Univere Test for progression state Second line
+     . Continue 
+     . Continue 
+     . Continue
+    2. Game stat is now 2 
 
 NAV (Red Star)
     1. Red Star Text for progression state 1
+    2. Red Star progression state 2
 
 NAV (Purple Star)
     1. Purple Star Test for progression 1
+
 
 
 
