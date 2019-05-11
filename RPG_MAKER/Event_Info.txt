@@ -1,0 +1,15 @@
+
+NAV (Universe)
+    1. Univere Test for progression state 1
+
+NAV (Red Star)
+    1. Red Star Text for progression state 1
+
+NAV (Purple Star)
+    1. Purple Star Test for progression 1
+
+
+
+
+
+
