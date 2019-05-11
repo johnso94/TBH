@@ -2,12 +2,12 @@
 
 void Client::run()
 {
-    string current_event = get_current_location();              //   Gets current event
-    string current_event_type = get_event_type(current_event);  //   Gets current event type
-    int progress = get_current_event_progress(current_event);   //   Gets current event progress
-    string event_info = get_event_info(current_event,progress); //   Gets current event info
-    vector<string> event_info_lines = split(event_info,'-');    //Creates current event info vector
-    trim_off_whitespaces(event_info_lines); 
+    string current_event = get_current_location();
+    string current_event_type = get_event_type(current_event);
+    int progress = get_current_event_progress(current_event);
+    string event_info = get_event_info(current_event,progress);
+    vector<string> event_info_lines = split(event_info,'-');
+    trim_off_whitespaces(event_info_lines);
 
     if(current_event_type == "NAV")
         navigation(event_info_lines);
@@ -15,55 +15,55 @@ void Client::run()
 
 void Client::navigation(vector<string> event_info)
 {
-    string display_text = "";
-    vector<pair<string, string>> locations_in_reach = get_nearby_locations();                   // Gets nearby Locations from world map
+    string navigation_text = "";
+    vector<pair<string, string>> locations_in_reach = get_nearby_locations();
 
     if(event_info.size() > 0)
-        display_text += event_info[0] + "\n";                                                   // Adds Current event description to display_text
+        navigation_text += event_info[0] + "\n";
 
     for (unsigned int i = 0; i < locations_in_reach.size(); i++)
     {
         if(i != 0)
         {
-            string nearby_location = locations_in_reach[i].second;
+            string display_text = locations_in_reach[i].second;
             if(display_text[0] == '@' || display_text[0] == '#')
-                display_text = display_text.substr(1);                          
-            display_text += "[" + to_string(i) + "] " + nearby_location + "\n";                    // adds [i] Location to display_text
+                display_text = display_text.substr(1);
+            navigation_text += "[" + to_string(i) + "] " + display_text + "\n";
         }
         else
         {
-            display_text += "\n###########" + locations_in_reach[0].first + "##############\n"; // Adds ###Current Location### to display_text
+            navigation_text += "\n###########" + locations_in_reach[0].first + "##############\n";
         }
     }
     vector<string> actions;
-    int user_input = get_user_input(display_text,1,locations_in_reach.size()-1);                //  Gets user input from yaml
-    string current_location = locations_in_reach[user_input].first;                             //  sets new current_location
-    write_current_location_to_txt(current_location);                                            // Write new current_location to current_location.txt
+    int user_input = get_user_input(navigation_text,1,locations_in_reach.size()-1);
+    string current_location = locations_in_reach[user_input].first;
+    write_current_location_to_txt(current_location);
 }
 
-int Client::get_user_input(string display_text,int min,int max)
+int Client::get_user_input(string event_text,int min,int max)
 {
     string user_input;
     int user_input_int;
     while (1)
     {
-        display_text += "\n<< ";
-        // clear_screen();
-        cout << display_text;                                      // Insert Yaml Code here
-        cin >> user_input;                                         // Insert Yaml Code here
-        if(user_input[0] > 48 && user_input[0] <= 57)              // Check if int
+        event_text += "\n<< ";
+        clear_screen();
+        cout << event_text;
+        cin >> user_input;
+        if(user_input[0] > 48 && user_input[0] <= 57)
         {
             user_input_int = stoi(user_input);
             if(user_input_int < min || user_input_int > max)
             {
-                display_text += "Input out of range";
+                event_text += "Input out of range";
             }
             else
                 break;
 
         }
         else
-            display_text += "Input must be int";
+            event_text += "Input must be int";
     }
     return user_input_int;
 }
