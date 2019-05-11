@@ -1,0 +1,14 @@
+Universe 1
+Red Star 1
+Yellow Star 1
+Green Star 1
+Blood Cave 1
+The Monster 1
+The Darkness 1
+Blue Star 1
+Start Game 1
+#Start Game 1
+#MENU 1
+ 1
+The Narrow edge 1
+Blinding Canions 1
