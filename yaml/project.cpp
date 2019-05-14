@@ -43,6 +43,16 @@ void screen(){
 }
 */
 
+string find_string() { // returns the string of chars starting at mem[500].
+    string x = "";
+    int i = 0;
+    while (mem[(i++)+500] != 0);
+    for (int j = 1; j < i; j++) {
+        x += mem[j+499];
+    }
+    return x;
+}
+
 int main() {
     init();
 
@@ -54,9 +64,9 @@ int main() {
 //    game.run();
 
 
-    write_at(mem, 100, "Event_text"); // Writes info from user to mem
-    Range t_range = find_value(yaml, "content:"); // Gets info from user
-    write_at(mem, 100, yaml, t_range); // Writes info from user to mem
+    // write_at(mem, 100, "Event_text"); // Writes info from user to mem
+    // Range t_range = find_value(yaml, "content:"); // Gets info from user
+    // write_at(mem, 100, yaml, t_range); // Writes info from user to mem
 
 /*
     char testing[t_range.len];
@@ -64,6 +74,10 @@ int main() {
     string z;
     z = testing;
 */
+    write_at(mem, 500, "Testing 1 2 3");
+    string t = find_string();
+    cerr << t;
+
     yaml[0] = 0;
     screen();
     add_yaml("image.yaml", {{"id", 1}, {"im", "wood.png"}, {"l", 0}, {"w", 880}, {"h", 430}});
