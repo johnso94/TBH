@@ -34,13 +34,28 @@ void Client::navigation(vector<string> event_info)
         }
         else
         {
-            navigation_text += "\n###########" + locations_in_reach[0].first + "##############\n";
+            navigation_text += "\n###" + locations_in_reach[0].first + "###\n";
         }
     }
     int user_input = get_user_input(navigation_text,1,locations_in_reach.size()-1);
     string current_location = locations_in_reach[user_input].first;
     set_player_info("Current Location",current_location);
+    // set_pictures(current_location);
 }
+
+void Client::set_pictures(string current_location)
+{
+    int progress = stoi(get_player_info("Progression"));
+    string event_info = get_event_info(current_location,progress);
+    vector<string> event_info_lines = split(event_info,'-');
+    trim_off_whitespaces(event_info_lines);
+    string forground = event_info_lines[event_info.size()-2];
+    string background = event_info_lines.back();
+    set_player_info("Current Foreground",forground);
+    set_player_info("Current Background",background);
+}
+
+
 
 void Client::set_player_info(string str1,string str2)
 {
@@ -66,7 +81,7 @@ void Client::set_player_info(string str1,string str2)
         }
         file.close();
     } else
-        cout << "Player_Info.txt not found";
+        cerr  << "Player_Info.txt not found";
 
     ofstream file_out("Player_Info.txt");
     file_out << player_info;
@@ -77,25 +92,21 @@ int Client::get_user_input(string event_text,int min,int max)
 {
     string user_input;
     int user_input_int;
-    while (1)
+    write_at(mem,100,event_text.c_str());
+    Range t_range = find_value(yaml, "content:");
+    char testing[t_range.len];
+    write_at(testing, 0, yaml, t_range);
+    user_input = testing;
+    if(user_input[0] > 48 && user_input[0] <= 57)
     {
-        event_text += "\n<< ";
-        cout << event_text;
-        cin >> user_input;
-        if(user_input[0] > 48 && user_input[0] <= 57)
+        user_input_int = stoi(user_input);
+        if(user_input_int < min || user_input_int > max)
         {
-            user_input_int = stoi(user_input);
-            if(user_input_int < min || user_input_int > max)
-            {
-                event_text += "Input out of range";
-            }
-            else
-                break;
-
+            event_text += "Input out of range";
         }
-        else
-            event_text += "Input must be int";
     }
+    else
+        event_text += "Input must be int";
     return user_input_int;
 }
 
@@ -150,7 +161,7 @@ string Client::get_player_info(string str)
         }
         file.close();
     } else {
-        cout << "Player_Info.txt not found" << "\n";
+        cerr  << "Player_Info.txt not found" << "\n";
     }
     return info;
 }
@@ -178,12 +189,12 @@ int Client::get_current_event_progress(string current_event)
                 progress = stoi(line.substr(last_space));
             } 
             else
-                cout << "progression not found in Player_Info.txt";
+                cerr  << "progression not found in Player_Info.txt";
         }
         file.close();
     } 
     else 
-        cout << "progression.txt was not found\n";
+        cerr  << "progression.txt was not found\n";
     return progress;
 }
 
@@ -244,7 +255,7 @@ string Client::get_event_info(string current_event,int progress)
         }
         file.close();
     } else
-        cout << "couldn't find Event_Info.txt\n";
+        cerr   << "couldn't find Event_Info.txt\n";
     if(event_info.size() == 0)
         event_info = "NAV";
     return event_info;
@@ -290,7 +301,7 @@ void Client::trim_off_whitespaces(string &str)
 void Client::clear_screen()
 {
     for (int i = 0; i < 50; i++)
-        cout << "\n";
+        cerr   << "\n";
 }
 
 int Client::count_tabs(string str)
@@ -352,7 +363,7 @@ vector<string> Client::get_World_Map()
     }
     else
     {
-        cout << "File could not be found\n";
+        cerr   << "File could not be found\n";
     }
     return World_Map;
 }

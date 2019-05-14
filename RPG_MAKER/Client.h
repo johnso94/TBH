@@ -6,6 +6,7 @@
 #include<string>
 #include<vector>
 #include<algorithm>
+#include"sd_fun.h"
 
 using namespace std;
 
@@ -21,6 +22,7 @@ public:
     void trim_off_whitespaces(vector<string> &v);
     void trim_off_whitespaces(string &str);
     void set_player_info(string str, string str2);
+    void set_pictures(string str);
 
     template <typename T>
     int findInVector(const vector<T> & vecOfElements, const T & element);

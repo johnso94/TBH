@@ -1,17 +1,25 @@
 
 NAV (Universe)
-    1. Univere Test for progression state Second line
-     . Continue 
-     . Continue 
-     . Continue
-    2. Game stat is now 2 
+    1. Universe Text - "wood.png" - "Background.png"
 
 NAV (Red Star)
-    1. Red Star Text for progression state 1
-    2. Red Star progression state 2
+    1. Red Star Text for progression state 1 - "Red_Star.png" - "Red_StarB.png"
 
 NAV (Purple Star)
-    1. Purple Star Test for progression 1
+    1. Purple Star Test for progression 1 - "Purple_Star.png" - "Purple_StarB.png"
+
+NAV (Red Sea)
+    1. Red Sea Text - "Red Sea.png" - "Red_StarB.png"
+
+NAV (Location)
+    1.
+        TEXT : Universe Text
+        FORGROUND : wood.png
+        BACKGROUND : Background.png
+    2.
+        TEXT : 
+        FORGROUND : 
+        BACKGROUND : 
 
 
 

@@ -1,2 +1,4 @@
-Current Location : Old Man
-Progression : 2
+Current Foreground : "wood.png"
+Current Background : "Background.png"
+Current Location : Universe
+Progression : 1

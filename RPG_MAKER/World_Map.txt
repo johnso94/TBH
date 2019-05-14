@@ -1,28 +1,28 @@
 
 
-Universe                                                                                              
-    #Red Star                                                   
-        #Red Sea                                                                                            
-            #The Eepts                                                                                          
-                #Is this going to work?                                                                                                                     
+Universe                                                                                                                   
+    Red Star                                                   
+        Red Sea                                                                                            
+            The Eepts                                                                                          
+                #Is this going to work?                                                                                                                       
             The Shallows                                                                                                                          
             The Danger                                                                                               
         Blood Cave                                                                                                           
             The Monster                                                                                     
-            The Darkness                                                                                                                                                                                                       
+            The Darkness                                                                                                                                                                                                           
             The Narrow edge                                                                                                                                                                                                                                                                            
         Dryied Underground                                                                                                                              
             The lost                                                                                                                                                                                                                                       
             The humiliated                                                                                                                                                                                                                                         
         Flourishing Bushes                                                                                                                                                                                                                
-    Yellow Star                                                                                                                                                                                                                                     
+    Yellow Star                                                                                                                                                                                                                                      
         Glowing Alleys                                                   
             Place in Glowing Alleys                                                                                                                                                        
         Bright Grasslands                                                                                                                                                        
         Blinding Canions                                                                                                                                                       
     Blue Star                                                                                                                                                        
         Cystal Ocean                                                                                                                                                        
-    Green Star                                                                                                                                                        
+    Green Star                                                                                                                                                           
         Jem Cave                                                                                                                                                        
         Green sea                                                                                        
     Purple Star                                                                                                                      

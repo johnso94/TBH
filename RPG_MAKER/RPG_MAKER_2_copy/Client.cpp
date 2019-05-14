@@ -253,16 +253,16 @@ int Client::get_user_input(string event_text,int min,int max)
     int user_input_int;
     while (1)
     {
-        string user_input;
-        int user_input_int;
-        write_at(mem,100,event_text.c_str());
-        Range t_range = find_value(yaml, "content:");
-        char testing[t_range.len];
-        write_at(testing, 0, yaml, t_range);
-        user_input = testing;
-        // event_text += "\n<< ";
-        // cout << event_text;
-        // cin >> user_input;
+        // string user_input;
+        // int user_input_int;
+        // write_at(mem,100,event_text.c_str());
+        // Range t_range = find_value(yaml, "content:");
+        // char testing[t_range.len];
+        // write_at(testing, 0, yaml, t_range);
+        // user_input = testing;
+        event_text += "\n<< ";
+        cout << event_text;
+        cin >> user_input;
         if(user_input[0] > 48 && user_input[0] <= 57)
         {
             user_input_int = stoi(user_input);
