@@ -1,8 +1,18 @@
 #include "Client.h"
 
-void Client::run()
+string Client::find_string(int pos) { // returns the string of chars starting at mem[500].
+    string x = "";
+    int i = 0;
+    while (mem[(i++)+pos] != 0);
+    for (int j = 1; j < i; j++) {
+        x += mem[j+pos-1];
+    }
+    return x;
+}
+
+string Client::run()
 {
-    string current_event = get_player_info("Current Location");
+    string current_event = find_string(500);
     int progress = stoi(get_player_info("Progression"));
     string event_info = get_event_info(current_event,progress);
     vector<string> event_info_lines = split(event_info,'-');
@@ -12,11 +22,49 @@ void Client::run()
 
     //printf("Current Event: %s\nProgress: %i\nType: %s\nInfo: %s\n",current_event.c_str(),progress,current_event_type.c_str(),event_info.c_str());
     if(event_info_lines[0] == "NAV")
-        navigation(event_info_lines);
+    {
+            string display_text = navigation(event_info_lines);
+            navigation2();
+            return display_text;
+    }
 }
 
-void Client::navigation(vector<string> event_info)
+void Client::navigation2()
 {
+    string current_event = find_string(500);
+    int progress = stoi(get_player_info("Progression"));
+    string event_info = get_event_info(current_event,progress);
+    vector<string> event_info = split(event_info,'-');
+    trim_off_whitespaces(event_info);
+    string navigation_text = "";
+
+    vector<pair<string, string>> locations_in_reach = get_nearby_locations();
+
+    if(event_info.size() > 2)
+        navigation_text += "\n" + event_info[2] + "\n";
+
+    for (unsigned int i = 0; i < locations_in_reach.size(); i++)
+    {
+        if(i != 0)
+        {
+            string display_text = locations_in_reach[i].second;
+            if(display_text[0] == '@' || display_text[0] == '#')
+                display_text = display_text.substr(1);
+            navigation_text += "[" + to_string(i) + "] " + display_text + "\n";
+        }
+        else
+        {
+            navigation_text += "\n###" + locations_in_reach[0].first + "###\n";
+        }
+
+    }
+    cerr << navigation_text << "\n";
+    write_at(mem,100,navigation_text.c_str());
+}
+
+string Client::navigation(vector<string> event_info)
+{
+
     string navigation_text = "";
     vector<pair<string, string>> locations_in_reach = get_nearby_locations();
 
@@ -36,11 +84,34 @@ void Client::navigation(vector<string> event_info)
         {
             navigation_text += "\n###" + locations_in_reach[0].first + "###\n";
         }
+
     }
     int user_input = get_user_input(navigation_text,1,locations_in_reach.size()-1);
     string current_location = locations_in_reach[user_input].first;
-    set_player_info("Current Location",current_location);
+    write_at(mem, 500, current_location.c_str());
+    cerr << navigation_text << "\n";
+    write_at(mem,100,navigation_text.c_str());
+    for (int i = 0; i < 7; i++) {
+        cerr << mem[i+500];
+    }
+    
+    cerr << "\n";
+    return navigation_text;
+    // display(navigation_text);
+
+    // display(navigation_text);
     // set_pictures(current_location);
+}
+
+void Client::write_display_text(string str)
+{
+    ofstream file_out("display_text.txt");
+    file_out << str;
+}
+
+void Client::display(string event_text)
+{
+    write_at(mem,100,event_text.c_str());
 }
 
 void Client::set_pictures(string current_location)
@@ -92,11 +163,13 @@ int Client::get_user_input(string event_text,int min,int max)
 {
     string user_input;
     int user_input_int;
-    write_at(mem,100,event_text.c_str());
+
     Range t_range = find_value(yaml, "content:");
     char testing[t_range.len];
     write_at(testing, 0, yaml, t_range);
     user_input = testing;
+    cerr << "\n" << user_input << "\n";
+
     if(user_input[0] > 48 && user_input[0] <= 57)
     {
         user_input_int = stoi(user_input);
@@ -109,31 +182,6 @@ int Client::get_user_input(string event_text,int min,int max)
         event_text += "Input must be int";
     return user_input_int;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -168,9 +216,6 @@ string Client::get_player_info(string str)
 
 
 
-
-
-
 int Client::get_current_event_progress(string current_event)
 {
     fstream file("Player_Info.txt");
@@ -197,8 +242,6 @@ int Client::get_current_event_progress(string current_event)
         cerr  << "progression.txt was not found\n";
     return progress;
 }
-
-
 
 bool Client::is_int(char c)
 {
@@ -289,6 +332,7 @@ void Client::trim_off_whitespaces(vector<string> &v)
             elem = elem.substr(1);
     }
 }
+
 void Client::trim_off_whitespaces(string &str)
 {
     while(str.back() == ' ')
@@ -371,7 +415,7 @@ vector<string> Client::get_World_Map()
 
 vector<pair<string, string>> Client::get_nearby_locations()
 {
-    string current_location = get_player_info("Current Location");
+    string current_location = find_string(500);
     vector<string> World_Map = get_World_Map();
     vector<pair<string, string>> locations_in_reach;
     pair<string, string> temp_pair;

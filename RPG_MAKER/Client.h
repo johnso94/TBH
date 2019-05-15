@@ -14,9 +14,13 @@ class Client{
 public:
     bool is_int(char a);
 
-    void run();
+    string find_string(int pos);
+    void write_display_text(string str);
+    string run();
+    void display(string str);
+    void navigation2();
     void clear_screen();
-    void navigation(vector<string> v);
+    string navigation(vector<string> v);
     void combat(vector<string> v);
     void select(vector<string> v);
     void trim_off_whitespaces(vector<string> &v);
