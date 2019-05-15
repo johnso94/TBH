@@ -1,0 +1,39 @@
+
+World
+-
+Type : NAV
+Back : None
+-
+Lots of Text for World
+Lots of Text for World
+Lots of Text for World
+Lots of Text for World
+Lots of Text for World
+
+
+L1
+-
+Type : NAV
+-
+Lots of Text for World
+Lots of Text for World
+Lots of Text for World
+Lots of Text for World
+Lots of Text for World
+
+
+L2
+-
+Type     : Combat
+Monsters : Goblin / Deamon / Ork / God
+Chance   : 20 / 20 / 20 / 30
+
+
+
+
+
+
+
+
+
+

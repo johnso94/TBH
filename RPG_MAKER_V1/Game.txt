@@ -1,0 +1,8 @@
+
+Event: Place where you Fight
+Background: Place where you Fight_B.png
+Foreground:
+Back to: Region1
+
+Monster: God
+Hp: 
