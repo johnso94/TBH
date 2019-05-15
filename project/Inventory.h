@@ -11,7 +11,6 @@ class Inventory{
     public:
     Inventory(){
         gold = 0;
-        v;
     }
     void Add_gold(int);
     void Remove_gold(int);

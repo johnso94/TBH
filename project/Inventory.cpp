@@ -14,7 +14,7 @@ void Inventory::Add_Inventory(string a){
 void Inventory::Remove_Inventory(string a){
     int len = 0;
     while(v[len] != a, len++);
-    if (len < v.size && len>=0){
+    if (len < v.size() && len >= 0){
         v.erase(v.begin() + len);
     }
 }
@@ -36,4 +36,5 @@ string Inventory::Show_Inventory(){
         t += x;
         t += "\n";
     }
+    return t;
 }
