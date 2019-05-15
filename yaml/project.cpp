@@ -43,12 +43,12 @@ void screen(){
 }
 */
 
-string find_string() { // returns the string of chars starting at mem[500].
+string find_string(int pos) { // returns the string of chars starting at pos
     string x = "";
     int i = 0;
-    while (mem[(i++)+500] != 0);
+    while (mem[(i++)+pos] != 0);
     for (int j = 1; j < i; j++) {
-        x += mem[j+499];
+        x += mem[j+pos-1];
     }
     return x;
 }
@@ -74,9 +74,7 @@ int main() {
     string z;
     z = testing;
 */
-    write_at(mem, 500, "Testing 1 2 3");
-    string t = find_string();
-    cerr << t;
+
 
     yaml[0] = 0;
     screen();
