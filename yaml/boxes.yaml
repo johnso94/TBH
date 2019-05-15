@@ -1,0 +1,11 @@
+View_{id}:
+  style:
+    position: absolute
+    left: {x}
+    top: {y}
+    width: {w}
+    height: {h}
+    backgroundColor: {back}
+    borderColor: {border}
+    borderWidth: {borderw}
+  children: [{children}]

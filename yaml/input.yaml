@@ -1,0 +1,12 @@
+TextInput_{id}:
+  style:
+    position: absolute
+    left: {x}
+    top: {y}
+    width: {w}
+    height: {h}
+    fontSize: {f}
+    borderColor: {border}
+    borderWidth: {borderw}
+  pos: {p}
+  len: {l}
