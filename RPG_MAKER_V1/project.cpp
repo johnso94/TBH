@@ -8,7 +8,7 @@
 #include"Client.h"
 using namespace std;
 
-
+// asd;fkljas;ldfjas;lkjfd;alsdkfj
 
 void screen() { // Makes a screen
     Point2 pview, pobox, pinput;

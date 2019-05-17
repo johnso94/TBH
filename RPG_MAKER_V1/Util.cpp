@@ -402,6 +402,7 @@ int Util::get_yaml_input(int min,int max)
 
     Range t_range = find_value(yaml, "content:");
     char testing[t_range.len];
+    write_at(testing,0,yaml,t_range);
     str_input = testing;
     cerr << str_input << "\n";
 
