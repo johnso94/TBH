@@ -1,21 +1,15 @@
+#include"Rectangle.h"
+#include"Circle.h"
+
+#include<fstream>
 #include<iostream>
 #include"sd_fun.h"
 #include"Rectangle.h"
 #include"Circle.h"
 #include <string>
+
 #include"Client.h"
 using namespace std;
-
-void text_box() {
-    append(yaml, "Text_output:\n");
-    append(yaml, "  style:\n");
-    append(yaml, "    marginLeft: 5\n");
-    append(yaml, "    marginTop: 5\n");
-    append(yaml, "    color: black\n");
-    append(yaml, "    fontSize: 15\n");
-    append(yaml, "  pos: 100\n");
-    append(yaml, "  len: 900\n");
-}
 
 
 void screen() { // Makes a screen
@@ -31,38 +25,45 @@ void screen() { // Makes a screen
     Rectangle input(pinput, 1220, 30); // Makes the input box
     obox.drawBorder(10, white, black);
     append(yaml, "  children: [Text_output]\n");
-    text_box();
+    add_yaml("text.yaml", {{"id", "output"}});
     input.drawText_input(1);
     view.drawBorder(10, white, black);
     append(yaml, "  children: [Image_1, Image_2]\n");
 }
 
-/*
-void screen(){
-    add_yaml("boxes.yaml", {{"id", 1}, {"x", 20}, {"y", 20}, {"w", 900}, {"h", 450}, {"back", "white"}, {"border", "black"}, {"borderw", 10}, {"child", 1}});
+string find_string(int pos) { // returns the string of chars starting at mem[500].
+    string x = "";
+    int i = 0;
+    while (mem[(i++)+pos] != 0);
+    for (int j = 1; j < i; j++) {
+        x += mem[j+pos-1];
+    }
+    return x;
 }
-*/
+
+
 
 int main() {
     init();
 
     if (length_of(yaml) < 50) {
         mem[100] = 0;
+        write_at(mem, 500, "Universe");
     }
 
+    // string display = find_string(500);
+    // write_at(mem,100,display.c_str());
+
+    // User Input 
+    // game.run(input)
+    // 
+
     Client game;
-    game.run();
-    // string current_location = "cu";
-    // int current_location_len = current_location.size();
-    // write_at(mem, 1000, "current_location:");
-    // write_at(mem, 1018, current_location.c_str());
-    // Range rng = find_value(mem, 999, "current_location:");
-    // cerr << mem[1018] << " " << mem[1018+current_location_len-1] << endl;
-    // cerr << rng.pos << " " << rng.len << endl;
- 
-    // write_at(mem, 100, "Event_text"); // Writes info from user to mem
-    // Range t_range = find_value(yaml, "content:"); // Gets info from user
-    // write_at(mem, 100, yaml, t_range); // Writes info from user to mem
+    string display_text = game.run();
+        
+
+//    write_at(mem,100,display_text.c_str());
+//    game.run(); // Input is used twice etc 1 = Red Star to Red Sea
 
 /*
     char testing[t_range.len];
@@ -70,11 +71,11 @@ int main() {
     string z;
     z = testing;
 */
+
     yaml[0] = 0;
     screen();
     add_yaml("image.yaml", {{"id", 1}, {"im", "wood.png"}, {"l", 0}, {"w", 880}, {"h", 430}});
     add_yaml("image.yaml", {{"id", 2}, {"im", "cat.png"}, {"l", 225}, {"w", 430}, {"h", 430}});
-
 
     mem[1] = 0;
     quit();
