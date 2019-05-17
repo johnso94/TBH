@@ -8,6 +8,7 @@
 #include <fstream>
 #include <map>
 #include"Location.h"
+#include"sd_fun.h"
 
 using namespace std;
 

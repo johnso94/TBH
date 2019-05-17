@@ -1,6 +1,6 @@
 
-Event: Region1
-Background: Region1_B.png
+Event: World
+Background: World_B.png
 Foreground:
 Back to: Region1
 

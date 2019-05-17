@@ -5,6 +5,7 @@
 #include<vector>
 #include<map>
 #include<fstream>
+#include"sd_fun.h"
 
 using namespace std;
 

@@ -399,8 +399,11 @@ int Util::get_yaml_input(int min,int max)
 {
     // Get string from input box
     string str_input;
-    cout << "<< ";
-    cin >> str_input;
+
+    Range t_range = find_value(yaml, "content:");
+    char testing[t_range.len];
+    str_input = testing;
+    cerr << str_input << "\n";
 
 
     // If string inputed from input box cant be converted to a int
@@ -435,5 +438,6 @@ void Util::print_to_yaml(string display_text)
         ...
         [n] Back
     */
-    cout << display_text << "\n";
+    write_at(mem,100,display_text.c_str());
+    // cout << display_text << "\n";
 }
