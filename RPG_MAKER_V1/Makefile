@@ -1,8 +1,22 @@
-ClientDriver: Client.o ClientDriver.o
-	g++ -g -Wall -std=c++11 -o a.out Client.o ClientDriver.o
+OPTS = -Wall -g -std=c++11
 
-ClientDriver.o: Client.cpp Client.h
-	g++ -g -Wall -std=c++11 -c ClientDriver.cpp
+all: ClientDriver
 
-Client.o: Client.cpp Client.h
-	g++ -g -Wall -std=c++11 -c Client.cpp
+ClientDriver: ClientDriver.cpp Location.o Client.o Util.o
+	g++ $(OPTS) -o a.out ClientDriver.cpp Location.o Client.o Util.o
+	
+Util.o: Util.cpp Util.h
+	g++ $(OPTS) -c Util.cpp
+
+Location.o: Location.cpp Location.h Util.h
+	g++ $(OPTS) -c Location.cpp
+
+Client.o: Client.cpp Client.h Location.h Util.h
+	g++ $(OPTS) -c Client.cpp
+
+
+clean:
+	\rm -f NavigatorDriver *.o
+
+
+
