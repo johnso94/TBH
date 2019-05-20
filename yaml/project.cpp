@@ -23,23 +23,17 @@ int main() {
 
     if (length_of(yaml) < 50) {
         mem[100] = 0;
+//        write_at(mem, 500, "World");
     }
 
-//    Client game;
-//    game.run();
-
-
-      write_at(mem, 100, "Start"); // Writes info from user to mem
-      Range t_range = find_value(yaml, "content:"); // Gets info from user
-      write_at(mem, 100, yaml, t_range); // Writes info from user to mem
+    Client game;
+    game.run();
 
 /*
-    char testing[t_range.len];
-    write_at(testing, 0, yaml, t_range);
-    string z;
-    z = testing;
+    write_at(mem, 100, "Start"); // Writes info from user to mem
+    Range t_range = find_value(yaml, "content:"); // Gets info from user
+    write_at(mem, 100, yaml, t_range); // Writes info from user to mem
 */
-
 
     yaml[0] = 0;
     screen();
