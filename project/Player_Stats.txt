@@ -1,1 +1,12 @@
-10  3   2   2   10  1   0   0   1
+name: Aarsanuvf
+hp: 12
+con: 3
+atk: 3
+def: 3
+cha: 2
+temp_hp: 12
+intel: 1
+wep: 0
+Exp: 0
+level: 1
+fireball: 0

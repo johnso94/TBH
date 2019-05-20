@@ -11,23 +11,26 @@ class PC;
 class Enemy:public fighter
 {
     bool convinced = 0;
-    int CR = 0;
+    int Challenge_Rating = 0;
     int gold;
     int EXP;
     string t;
     string title;
+    string disposal;
+    int blocked = 0;
+    int escaped = 0;
 
 public:
-    Enemy(string name, int cr, int gp, int Exp, int thp, int str, int tdef)
+    Enemy(string filename)
     {
-        hp = thp;
-        str = str;
-        temp_hp = thp;
-        EXP = Exp;
-        gold = gp;
-        CR = cr;
-        title = name;
-        def = tdef;
+        temp_hp = stoi(get_value("Game.txt","temp_hp:"));
+        title = get_value("Game.txt","title:");
+        Challenge_Rating = stoi(get_value("Game.txt","cr:"));
+        gold = stoi(get_value("Game.txt","gold:"));
+        EXP = stoi(get_value("Game.txt","Exp:"));
+        hp = stoi(get_value("Game.txt","hp:"));
+        atk = stoi(get_value("Game.txt","atk:"));
+        def = stoi(get_value("Game.txt","def:"));
     }
 
     void give_wealth(Inventory &i);
@@ -40,12 +43,25 @@ public:
     int AC();
     void reset(){
         temp_hp = hp;
+        set_value("Game.txt","temp_hp:", to_string(hp));
     }
     int total_hp();
     string name(){
         return title;
     }
     void action(PC &pc);
+    void display();
+    void set_temp_hp();
+    void block(){
+        blocked = 1;
+        cout << "you block the" << title << "'s next attack" << endl;
+    }
+    void escape(){
+        escaped = 1;
+    }
+    bool fled(){
+        return escaped;
+    }
 };
 
 #endif

@@ -23,7 +23,7 @@ bool Enemy::is_convinced()
 }
 int Enemy::return_CR()
 {
-    return CR;
+    return Challenge_Rating;
 }
 int Enemy::get_hp()
 {
@@ -44,11 +44,29 @@ void Enemy::action(PC &pc)
      if (roll + atk > pc.AC())
      {
          int damage = rand() % 6 + atk;
-         pc.take_damage(damage);
+         if (blocked){
+             damage /= 2;
+             blocked = 0;
+         }
+         pc.take_damage(damage, "slashing");
+         pc.set_temp_hp();
          cout << "The " << title << " strikes." << endl;
         cout << "You take " << damage <<" damage." << endl;
     }
     else{
-        cout << "The " << title << " misses" << endl;
+        cout << "The " << title << " misses its attack" << endl;
      }
+}
+void Enemy::display(){
+
+    cout << "name: " << title << endl;
+    cout << "Challenge Rating: " << Challenge_Rating << endl;
+    cout << "gold carried: " << gold << endl;
+    cout << "EXP given:" << EXP << endl;
+    cout << "hp: " << temp_hp << '/' << hp << endl;
+    cout << "atk: " << atk << endl;
+    cout << "def: " << def << endl;
+}
+void Enemy::set_temp_hp(){
+    set_value("Game.txt", "temp_hp:", to_string(temp_hp));
 }

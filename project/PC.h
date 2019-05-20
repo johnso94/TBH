@@ -12,19 +12,21 @@ class PC:public fighter
     int wep;
     int EXP;
     int level;
+    string name;
 
 public:
-    PC(ifstream &is)
+    PC(string filename)
     {
-        is >> hp;
-        is >> atk;
-        is >> def;
-        is >> cha;
-        is >> temp_hp;
-        is >> intel;
-        is >> wep;
-        is >> EXP;
-        is >> level;
+        temp_hp = stoi(get_value("Player_Stats.txt","temp_hp:"));
+        name = get_value("Player_Stats.txt","name:");
+        EXP = stoi(get_value("Player_Stats.txt","Exp:"));
+        level = stoi(get_value("Player_Stats.txt","Exp:"));
+        hp = 4 * stoi(get_value("Player_Stats.txt","con:"));
+        atk = stoi(get_value("Player_Stats.txt","atk:"));
+        def = stoi(get_value("Player_Stats.txt","def:"));
+        cha = stoi(get_value("Player_Stats.txt","cha:"));
+        def = stoi(get_value("Player_Stats.txt","def:"));
+        wep = stoi(get_value("Player_Stats.txt","wep:"));
     }
     void attack(Enemy &npc, string & is);
     void talk(Enemy &npc);
@@ -32,6 +34,7 @@ public:
     void gain_exp(int i)
     {
         EXP += i;
+        set_value("Player_Stats.txt", "EXP:", to_string(EXP));
         if (EXP >= 100 * level)
         {
             EXP -= 100 * level;
@@ -39,7 +42,8 @@ public:
             level_up();
         }
     }
-    void run(Enemy &npc);
+    void run(Enemy &monster);
+    void steal(Enemy &monster, Inventory &inv);
     int get_health()
     {
         return temp_hp;
@@ -53,6 +57,11 @@ public:
     int AC(){
         return def;
     }
+    void DIE(){
+         string is = get_value("Game.txt","death:");
+         cout << is;
+    }
+    void set_temp_hp();
 };
 
 #endif

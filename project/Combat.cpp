@@ -28,7 +28,7 @@ void round(PC &player, Enemy &monster, string is, Inventory &inv)
         if (player.get_health() <= 0)
         {
             // PlaceHolder here we would incorporate the deathsystem
-            cout << "you have died" << endl;
+            player.DIE();
             break;
         }
         monster.action(player);
@@ -41,6 +41,7 @@ void round(PC &player, Enemy &monster, string is, Inventory &inv)
         {
             //PlaceHolder returns the player to the location
             monster.give_exp(player);
+            break;
         }
         if (monster.get_hp() <= 0)
         {
@@ -48,19 +49,55 @@ void round(PC &player, Enemy &monster, string is, Inventory &inv)
             monster.give_wealth(inv);
             monster.give_exp(player);
             monster.die();
+            break;
         }
         if (player.get_health() <= 0)
         {
-            //PlaceHolder here we would incorporate the deathsystem
+            player.DIE();
         }
         monster.action(player);
         break;
     }
     case 3:
     {
+        player.run(monster);
+        if (monster.fled()){
+            break;
+        }
+        monster.action(player);
+        if (player.get_health() <= 0)
         {
-            player.run(monster);
-            monster.action(player);
+            player.DIE();
+        }
+        break;
+    }
+    case 4:
+    {
+        player.steal(monster, inv);
+        monster.action(player);
+        if (player.get_health() <= 0)
+        {
+            player.DIE();
+        }
+        break;
+    }
+    case 5:
+    {
+        monster.block();
+        monster.action(player);
+        if (player.get_health() <= 0)
+        {
+            player.DIE();
+        }
+        break;
+    }
+    case 6:
+    {
+        monster.display();
+        monster.action(player);
+        if (player.get_health() <= 0)
+        {
+            player.DIE();
         }
         break;
     }
@@ -76,22 +113,26 @@ void round(PC &player, Enemy &monster, string is, Inventory &inv)
         }
         break;
     }
+    case 11:
+    {}
     }
 }
 void encounter(PC &player, Enemy &monster, Inventory &inv){
     monster.reset();
-    while(player.get_hp() >0 && monster.get_hp() > 0){
+    while(player.get_hp() >0 && monster.get_hp() > 0 && (monster.is_convinced()==0) && (monster.fled() == 0)){
         string input;
         cin >> input;
         round(player, monster, input, inv);
+        cout << endl;
         cout << "you have " << player.get_hp() << " health"<< endl;
         cout << "the "<< monster.name() << " has " << monster.get_hp() << " health" << endl;
     }
+    string Back_to = get_value("Game.txt","Back_to:");
+    set_value("Game.txt", "Event:",Back_to);
 }
 int main() {
-    ifstream f("Player_Stats.txt");
-    PC Aarsanuvf(f);
-    Enemy goblin("goblin scout", 0, 0, 0, 10, 0,0);
+    PC Aarsanuvf("Player_Stats.txt");
+    Enemy monster("Game.txt");
     Inventory test;
-    encounter(Aarsanuvf, goblin, test);
+    encounter(Aarsanuvf, monster, test);
 }
