@@ -9,10 +9,9 @@ using namespace std;
 #include <cstdlib>
 #include <fstream>
 struct PlaceHolder;
-
-    extern void set_value(string filename, string key, string value);
-    extern void cut_spaces_off_ends(string &str);
-    extern string get_value(string filename, string _key);
+extern void set_value(string filename, string key, string value);
+extern void cut_spaces_off_ends(string &str);
+extern string get_value(string filename, string _key);
 class fighter
 {
 protected:
@@ -30,6 +29,11 @@ public:
     {
         temp_hp -= i;
     }
+    void reset(){
+        temp_hp = hp;
+        set_value("Game.txt","temp_hp:", to_string(hp));
+    }
 };
+
 
 #endif

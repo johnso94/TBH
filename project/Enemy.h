@@ -19,7 +19,7 @@ class Enemy:public fighter
     string disposal;
     int blocked = 0;
     int escaped = 0;
-
+    int missed = 0;
 public:
     Enemy(string filename)
     {
@@ -41,10 +41,6 @@ public:
     int return_CR();
     int get_hp();
     int AC();
-    void reset(){
-        temp_hp = hp;
-        set_value("Game.txt","temp_hp:", to_string(hp));
-    }
     int total_hp();
     string name(){
         return title;
@@ -61,6 +57,12 @@ public:
     }
     bool fled(){
         return escaped;
+    }
+    void missed_reset(){
+        missed = 0;
+    }
+    int miss(){
+        return missed;
     }
 };
 

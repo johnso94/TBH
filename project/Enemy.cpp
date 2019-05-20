@@ -55,6 +55,7 @@ void Enemy::action(PC &pc)
     }
     else{
         cout << "The " << title << " misses its attack" << endl;
+        missed = 1;
      }
 }
 void Enemy::display(){
@@ -66,6 +67,8 @@ void Enemy::display(){
     cout << "hp: " << temp_hp << '/' << hp << endl;
     cout << "atk: " << atk << endl;
     cout << "def: " << def << endl;
+    string is =  get_value("Game.txt","Description:");
+    cout << is << endl;
 }
 void Enemy::set_temp_hp(){
     set_value("Game.txt", "temp_hp:", to_string(temp_hp));
