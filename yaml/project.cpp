@@ -1,7 +1,7 @@
 #include<iostream>
+#include<fstream>
 #include"sd_fun.h"
 #include <string>
-#include"Client.h"
 using namespace std;
 
 void screen(){ // Makes the basic Screen
@@ -24,9 +24,6 @@ int main() {
     if (length_of(yaml) < 50) { // Sets up the game.
         mem[100] = 0;
     }
-
-    Client game; 
-    game.run(); // Runs the game
 
     yaml[0] = 0; // Gets yaml from server then sends an updated screen
     screen();
