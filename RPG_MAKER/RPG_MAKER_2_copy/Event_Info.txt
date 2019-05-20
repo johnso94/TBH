@@ -1,0 +1,175 @@
+
+World
+1
+    Type:               NAV
+    Text:               Description of World
+    Foreground Image:   Default.png
+    Background Image:   Default.png
+    Script:             Back to World
+2
+    Text: It seems that you have visited Region1
+50
+    Text: World Text at progress 50
+    Foreground Image: Progress50.png
+
+
+Everwhere
+1
+    Text:               Text for Everwhere
+    Foreground Image:   Everywhere_F.png
+    Background Image:   Everywhere_B.png
+    Progress: 1 / 2
+
+
+Region1
+1
+    Type:               NAV
+    Text:               Description of Region1
+    Foreground Image:   Default.png
+    Background Image:   Default.png
+    Script:             Go to Region1
+    Progress:           1 / 2
+9
+    Text: It seems that you have visited R1-a
+
+R1-a
+1
+    Type:               NAV
+    Text:               Description of R1-a
+    Foreground Image:    Default.png
+    Background Image:   Default.png
+    Script:             Go to R1-a
+    Progress:           1 / 2
+2
+    Text:               This is the text of R1-a in Progress 2
+    Progress:           1 / 2
+
+a
+1
+    Type:               NAV
+    Text:               Default Text
+    Foreground Image:    Default.png
+    Background Image:   Default.png
+    Script:             This is the text for a
+9
+    Text: The game is now in state 9
+
+b
+1
+    Type:               NAV
+    Text:               Default Text
+    Foreground Image:    Default.png
+    Background Image:   Default.png
+    Script:             go to b
+
+c
+1
+    Type:               NAV
+    Text:               Default Text
+    Foreground Image:    Default.png
+    Background Image:   Default.png
+    Script:             go to c
+
+d
+1
+    Type:               NAV
+    Text:               Default Text
+    Foreground Image:    Default.png
+    Background Image:   Default.png
+    Script:             go to d
+
+e
+1
+    Type:               NAV
+    Text:               Default Text
+    Foreground Image:    Default.png
+    Background Image:   Default.png
+    Script:             go to e
+
+f
+1
+    Type:               NAV
+    Text:               Default Text
+    Foreground Image:    Default.png
+    Background Image:   Default.png
+    Script:             go to f
+
+R1-b
+1
+    Type:               NAV
+    Text:               Default Text
+    Foreground Image:    Default.png
+    Background Image:   Default.png
+    Script:             go to R1-b
+
+R1-c
+1
+    Type:               NAV
+    Text:               Default Text
+    Foreground Image:    Default.png
+    Background Image:   Default.png
+    Script:             go to R2-c
+
+Region2
+1
+    Type:               NAV
+    Text:               Default Text
+    Foreground Image:    Default.png
+    Background Image:   Default.png
+    Script:             go to Region2
+
+R2-a
+1
+    Type:               NAV
+    Text:               Default Text
+    Foreground Image:    Default.png
+    Background Image:   Default.png
+    Script:             go to R2-a
+
+R2-b
+1
+    Type:               NAV
+    Text:               Default Text
+    Foreground Image:    Default.png
+    Background Image:   Default.png
+    Script:             go to R2-b
+
+R2-c
+1
+    Type:               NAV
+    Text:               Default Text
+    Foreground Image:    Default.png
+    Background Image:   Default.png
+    Script:             go to R2-c
+
+Region3
+1
+    Type:               NAV
+    Text:               Default Text
+    Foreground Image:    Default.png
+    Background Image:   Default.png
+    Script:             go to Region3
+
+R3-a
+1
+    Type:               NAV
+    Text:               Default Text
+    Foreground Image:    Default.png
+    Background Image:   Default.png
+    Script:             go to R3-a
+
+R3-b
+1
+    Type:               NAV
+    Text:               Default Text
+    Foreground Image:    Default.png
+    Background Image:   Default.png
+    Script:             go to R3-b
+
+R3-c
+1
+    Type:               NAV
+    Text:               Default Text
+    Foreground Image:    Default.png
+    Background Image:   Default.png
+    Script:             go to R3-c

@@ -1,0 +1,68 @@
+World
+    @Region1
+    @Region2
+    @Region3
+    @Tunnel
+    Region4
+
+Tunnel
+    u
+        uu
+            uuu
+                uuu
+                    fff
+                    ggg
+                    dd
+                    hi
+                    Hello
+        Right
+                Rnadom
+    Locations
+        Everwhere
+            ran
+    World
+
+Region1
+    R1-a
+    R1-b
+    R1-c
+    a
+        b
+            c
+                d
+    World
+
+Region2
+    R2-a
+    R2-b
+    R2-c
+    World
+
+Region3
+    R3-a
+    R3-b
+    R3-c
+    aa
+        bb
+            cc
+                dd
+                    ee
+                        ff
+    World
+
+
+
+_END_
+    
+
+
+
+
+
+
+
+
+
+
+                                   
+                                                             

@@ -1,0 +1,38 @@
+
+
+#############
+# Locations #
+#############
+
+
+World
+-
+Type : NAV
+Back : None
+-
+Lots of Text for World
+Lots of Text for World
+Lots of Text for World
+Lots of Text for World
+Lots of Text for World
+
+
+L1
+-
+Type : NAV
+-
+Lots of Text for World
+Lots of Text for World
+Lots of Text for World
+Lots of Text for World
+Lots of Text for World
+
+
+
+
+
+
+
+
+
+
