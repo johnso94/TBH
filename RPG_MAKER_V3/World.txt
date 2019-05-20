@@ -1,0 +1,53 @@
+World
+    @Region1                                                    
+    @Region2
+    @Region3
+    @Darkness
+    _NO BACK_
+
+
+Region1
+    No 
+    Fight a Monster
+    No numbers
+    do
+        i
+            have change the name
+            World
+                to
+                    make
+                    rooms
+                    for 
+                    this
+                    place 
+                    to go
+                        a
+                            change
+                                every 
+                                    time?
+    World
+
+
+
+Region2
+    Lets
+    Create
+    New 
+    Locations
+    World
+
+
+
+Region3
+    Numbers Screw it up
+    L8
+    L9
+    World
+
+Darkness
+    THis place might take a while?
+    World
+
+
+
+
