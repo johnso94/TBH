@@ -1,7 +1,7 @@
 #include<iostream>
+#include<fstream>
 #include"sd_fun.h"
 #include <string>
-#include"Client.h"
 using namespace std;
 
 void screen(){ // Makes the basic Screen
@@ -18,15 +18,18 @@ void add_images(ifstream &m) { // Sets images for yaml
     add_yaml("image.yaml", {{"id", "Foreground"}, {"im", y.c_str()}, {"l", 225}, {"w", 330}, {"h", 430}});
 }
 
+int find_len(int pos) { // returns the pos of a string of chars starting at mem[pos].
+    int i = 0;
+    while (mem[(i++)+pos] != 0);
+    return i;
+}
+
 int main() {
     init();
 
     if (length_of(yaml) < 50) { // Sets up the game.
         mem[100] = 0;
     }
-
-    Client game; 
-    game.run(); // Runs the game
 
     yaml[0] = 0; // Gets yaml from server then sends an updated screen
     screen();
