@@ -1,8 +1,27 @@
-ClientDriver: Client.o ClientDriver.o
-	g++ -g -Wall -std=c++11 -o a.out Client.o ClientDriver.o
+OPTS = -Wall -g -std=c++11
 
-ClientDriver.o: Client.cpp Client.h
-	g++ -g -Wall -std=c++11 -c ClientDriver.cpp
+all: project
 
-Client.o: Client.cpp Client.h
-	g++ -g -Wall -std=c++11 -c Client.cpp
+project: project.cpp Shape.o Rectangle.o Location.o Client.o Util.o 
+	g++ $(OPTS) -o a.out project.cpp Shape.o Rectangle.o Location.o Client.o Util.o sd_fun.o str_util.o -lm
+
+Shape.o: Shape.cpp Shape.h
+	g++ $(OPTS) -c Shape.cpp
+
+Rectangle.o: Rectangle.cpp Rectangle.h Shape.h
+	g++ $(OPTS) -c Rectangle.cpp
+	
+Util.o: Util.cpp Util.h
+	g++ $(OPTS) -c Util.cpp
+
+Location.o: Location.cpp Location.h Util.h
+	g++ $(OPTS) -c Location.cpp
+
+Client.o: Client.cpp Client.h Location.h Util.h
+	g++ $(OPTS) -c Client.cpp
+
+clean:
+	\rm -f project *.o
+
+
+

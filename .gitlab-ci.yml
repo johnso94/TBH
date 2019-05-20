@@ -1,0 +1,5 @@
+image: docker.cs.stolaf.edu:443/sd_managers/sd-backend:latest
+
+#Replace PROJECTNAME with the App Engine Project ID
+gcloud:
+    script: "source /SD-backend/deploy.sh clever-cogency-240219"

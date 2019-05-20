@@ -1,8 +1,12 @@
 
-Event: Place where you Fight
-Background: Place where you Fight_B.png
+Event: World
+Background: World_B.png
 Foreground:
 Back to: Region1
 
-Monster: God
-Hp: 
+Monster Name: Deamon
+Monster Strength: 20
+Monster Def: 10
+Monster Max Hp: 50
+Monster Current Hp: 50
+Monster Description: A Deamon emerges out of the flame
