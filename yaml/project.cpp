@@ -4,44 +4,31 @@
 #include"Client.h"
 using namespace std;
 
-void screen(){
-    add_yaml("boxes.yaml", {{"id", "Screen"}, {"x", 20}, {"y", 20}, {"w", 900}, {"h", 450}, {"back", "white"}, {"border", "black"}, {"borderw", 10}, {"children", "Image_Background, Image_Foreground"}});
-    add_yaml("boxes.yaml", {{"id", "TextOutput"}, {"x", 940}, {"y", 20}, {"w", 300}, {"h", 450}, {"back", "white"}, {"border", "black"}, {"borderw", 10}, {"children", "Text_Output"}});
+void screen(){ // Makes the basic Screen
+    add_yaml("boxes.yaml", {{"id", "Screen"}, {"x", 20}, {"y", 20}, {"w", 800}, {"h", 450}, {"back", "white"}, {"border", "black"}, {"borderw", 10}, {"children", "Image_Background, Image_Foreground"}});
+    add_yaml("boxes.yaml", {{"id", "TextOutput"}, {"x", 840}, {"y", 20}, {"w", 400}, {"h", 450}, {"back", "white"}, {"border", "black"}, {"borderw", 10}, {"children", "Text_Output"}});
     add_yaml("text.yaml", {{"id", "Output"}});
     add_yaml("input.yaml", {{"id", 1}, {"x", 20}, {"y", 490}, {"w", 1220}, {"h", 30}, {"f", 20}, {"border", "black"}, {"borderw", 5}, {"p", 1}, {"l", 150}});
 }
 
-void add_images(ifstream &m) {
+void add_images(ifstream &m) { // Sets images for yaml
     string x, y;
     m >> x >> y;
-    add_yaml("image.yaml", {{"id", "Background"}, {"im", x.c_str()}, {"l", 0}, {"w", 880}, {"h", 430}});
-    add_yaml("image.yaml", {{"id", "Foreground"}, {"im", y.c_str()}, {"l", 225}, {"w", 430}, {"h", 430}});
+    add_yaml("image.yaml", {{"id", "Background"}, {"im", x.c_str()}, {"l", 0}, {"w", 780}, {"h", 430}});
+    add_yaml("image.yaml", {{"id", "Foreground"}, {"im", y.c_str()}, {"l", 225}, {"w", 330}, {"h", 430}});
 }
 
 int main() {
     init();
 
-    if (length_of(yaml) < 50) {
+    if (length_of(yaml) < 50) { // Sets up the game.
         mem[100] = 0;
     }
 
-//    Client game;
-//    game.run();
+    Client game; 
+    game.run(); // Runs the game
 
-
-      write_at(mem, 100, "Start"); // Writes info from user to mem
-      Range t_range = find_value(yaml, "content:"); // Gets info from user
-      write_at(mem, 100, yaml, t_range); // Writes info from user to mem
-
-/*
-    char testing[t_range.len];
-    write_at(testing, 0, yaml, t_range);
-    string z;
-    z = testing;
-*/
-
-
-    yaml[0] = 0;
+    yaml[0] = 0; // Gets yaml from server then sends an updated screen
     screen();
     ifstream file("images.txt");
     add_images(file);
