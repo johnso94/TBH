@@ -1,0 +1,94 @@
+
+#############
+# Locations #
+#############
+
+
+World
+-
+Type: NAV
+Back: None
+-
+Lots of Text for World
+Lots of Text for World
+Lots of Text for World
+Lots of Text for World
+Lots of Text for World
+
+
+L1
+-
+Type : NAV
+-
+Lots of Text for World
+Lots of Text for World
+Lots of Text for World
+Lots of Text for World
+Lots of Text for World
+
+
+Place where you Fight
+-
+Type    : Select Monster
+Monster : Goblin / Deamon / Ork / God
+Chance  : 9000 / 20 / 20 / 9000
+Back to : Region1
+
+
+
+############
+# Monsters #
+############
+
+
+Goblin
+-
+Type : Monster
+Str : 1
+Def : 1
+Hp : 10
+-
+A feriocious goblin attempts to hurt you
+
+
+Deamon
+-
+Type : Monster
+Str : 20
+Def : 10
+Hp : 50
+-
+A Deamon emerges out of the flame
+
+
+Ork
+-
+Type : Monster
+Str : 10
+Def : 20
+Hp : 50
+-
+A Bulky Ork comes tumbling towards you
+
+God
+-
+Type : Monster
+Str : 7777
+Def : 7777
+Hp : 7777
+-
+Your smited by God
+
+
+
+
+
+
+
+
+
+
+
+
+
+
