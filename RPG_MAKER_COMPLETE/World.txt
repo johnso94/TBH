@@ -1,0 +1,23 @@
+
+
+World
+    Place1
+    Place2
+    Place3
+    Place4
+
+Falador
+    Lumbridge
+    Varrock
+    Goblin Village
+
+
+
+
+STOP
+
+
+
+
+
+
