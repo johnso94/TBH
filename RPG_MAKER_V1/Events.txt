@@ -1,0 +1,140 @@
+
+#############
+# Locations #
+#############
+
+
+World
+-
+Type: Nav
+-
+Lots of Text for World
+Lots of Text for World
+Lots of Text for World
+Lots of Text for World
+Lots of Text for World
+
+
+L1111
+-
+Type : Nav
+-
+Lots of Text for World
+Lots of Text for World
+Lots of Text for World
+Lots of Text for World
+Lots of Text for World
+
+
+##########
+# Select #
+##########
+
+
+Fight a Monster
+-
+Type    : Select
+Events : Goblin / Deamon / Ork / God / Minatour / Wisp / asdfasdf / Diablo
+Chance  : 10 / 10 / 10 / 10 / 10 / 10 / 1 / 5
+Back to : Region2
+
+
+############
+# Monsters #
+############
+
+
+Goblin
+-
+Type : Combat
+Str : 1
+Def : 1
+Hp : 10
+-
+A feriocious goblin attempts to hurt you
+
+
+Deamon
+-
+Type : Combat
+Str : 20
+Def : 10
+Hp : 50
+-
+A Deamon emerges out of the flame
+
+
+Ork
+-
+Type : Combat
+Str : 10
+Def : 20
+Hp : 50
+-
+A Bulky Ork comes tumbling towards you
+
+God
+-
+Type : Combat
+Str : 7777
+Def : 7777
+Hp : 7777
+-
+Your smited by God
+
+Wisp
+-
+Type : Combat
+Str : 1
+Def : 1
+Hp : 1
+-
+A delightful Wisp
+
+
+Minatour
+-
+Type : Combat
+Str : 100
+Def : 50
+Hp : 200
+-
+A cow man?
+
+Diablo
+-
+Type : Combat
+Str : 666
+Def : 666
+Hp : 666
+-
+I am Diablooooo
+
+
+asdfasdf
+-
+Type : Combat
+Str : 029347259087
+Def : 9283752897
+Hp : 92837562389746
+-
+What the hell is this?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

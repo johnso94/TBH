@@ -1,0 +1,8 @@
+Image_{id}:
+  name: {im}
+  style:
+    position: absolute
+    bottom: 0.000001
+    left: {l}
+    width: {w}
+    height: {h}

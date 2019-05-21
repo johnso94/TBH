@@ -1,0 +1,5 @@
+Event: World
+Foreground Image: Default.png
+Background Image: Default.png
+Progress: 1
+

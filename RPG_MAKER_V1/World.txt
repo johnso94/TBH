@@ -1,0 +1,38 @@
+World
+    @Region1
+    @Region2
+    @Region3
+    _NO BACK_
+
+Region1
+    L1111
+    Fight a Monster
+    L3
+    tunnel1
+        tunnel2
+            tunnel3
+                tunnel4
+                    tunnel5
+                        tunnel6
+                            tunnel7
+                                tunnel8
+    World
+
+Region2
+    L4
+    L5
+    L6
+    World
+
+Region3
+    Numbers Screw it up
+    L8
+    L9
+    World
+
+
+
+
+Deep Hole
+    Darkness
+
