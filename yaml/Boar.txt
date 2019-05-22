@@ -1,0 +1,28 @@
+Event: 
+Background: Fight a Monster_8.png
+Foregound:
+Back to: Region1
+Game State: Combat
+
+temp_hp: 10
+title: Wild boar
+cr:  0
+gold: 0
+Exp: 50
+hp: 10
+atk: 1
+def: 1
+
+Description: A wild boar.
+
+victory: The boar falls to your feet, dead.
+
+Persuasion: Wait! How on earth did you... nevermind, it breaks the reality of the world if you
+think about it too much. Congratulations, your words move the wild boar to tears
+and it leaves you alone.
+
+run: You elude the wild boar.
+
+rob: Stupid. Theres nothing to steal on a wild boar.
+
+death: the boars tusks rip a hole in your side.

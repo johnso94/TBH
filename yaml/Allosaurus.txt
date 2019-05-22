@@ -1,0 +1,28 @@
+Event: 
+Background: Fight a Monster_8.png
+Foregound:
+Back to: Region1
+Game State: Combat
+
+temp_hp: 50
+title: Allosaurus
+cr:  5
+gold: 0
+Exp: 50
+hp: 50
+atk: 5
+def: 5
+
+Description: An allosaurus.
+
+victory: The allosuarus falls to your feet, dead.
+
+Persuasion: Wait! How on earth did you... nevermind, it breaks the reality of the world if you
+think about it too much. Congratulations, your words move the allosaurus to tears
+and it leaves you alone.
+
+run: You elude the Allosaurus.
+
+rob: There's nothing to rob on the allosaurus.
+
+death: The allosaurus rips into you and starts eating before you even die.

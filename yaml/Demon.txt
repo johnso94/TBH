@@ -1,0 +1,29 @@
+Event: 
+Background: Fight a Monster_8.png
+Foregound:
+Back to: Region1
+Game State: Combat
+
+temp_hp: 2
+title: demon
+cr:  5
+gold: 0
+Exp: 100
+hp: 50
+atk: 5
+def: 5
+
+Description: A goblin scout.
+
+victory: As the demon starts melting before your eyes you hear it say, "gniyas si nomed eht tahw suoiruc taht yllaer uoy era, siht 
+daer ot emit eht gnikat uoy era yhw" before vanishing altogether.
+
+persuasion: How you convince a demon to leave you alone, I have absolutely no idea but somehow you've done the impossible.
+Congatulations!
+
+run: The demon screams to no avail at your fleeing form.
+
+rob: You find some cold brass on the demon which you pocket.
+
+death: As you fall, you see the demon utter an incantation then vanish to wreak havok on the world above.
+

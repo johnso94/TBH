@@ -1,0 +1,26 @@
+Event: 
+Background: Fight a Monster_8.png
+Foregound:
+Back to: Region1
+Game State: Combat
+
+temp_hp: 2
+title: goblin_scout
+cr:  0
+gold: 0
+Exp: 1
+hp: 10
+atk: 0
+def: 0
+
+Description: A goblin scout.
+
+victory: The goblin falls to your feet, dead.
+
+persuasion: Congratulations! Through flawless reasoning you convince the goblin that it would do better  waiting for a weaker traveler to pass by. The goblin lets you go and shares some gold for the advice.
+
+run: Congratulations! Like a wuss, you have somehow escaped one puny goblin who, in your wussness, you did not believe you could defeat. Again, congratulations!
+
+rob: On the goblin you find some trinkets to line your pockets with.
+
+death: You fall to the ground, dead, as the goblin eagerly steps up to loot your corpse.

@@ -1,0 +1,27 @@
+Event: 
+Background: Fight a Monster_8.png
+Foregound:
+Back to: Region1
+Game State: Combat
+
+temp_hp: 10
+title: zombie
+cr:  5
+gold: 0
+Exp: 100
+hp: 10
+atk: 0
+def: 0
+
+Description: A zombie.
+
+victory: The last bit of necromantic energy holding the zombie together fades as it collapes to the ground.
+
+persuasion: You convince the zombie that undeath is just a second chance at life and you send it off to a town to get a respectable job.
+
+run: The zombie feebly tries to follow you but its shambling form is just too slow.
+
+rob: You find a purse the zombie must have been carrying before it died.
+
+death: The zombie leans over and starts eating your corpse.
+

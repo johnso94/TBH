@@ -315,7 +315,7 @@ void encounter(PC &player, Enemy &monster, Inventory &inv)
     }
 }
 
-void new_game() {
+void new_game() { // Resets Player_Stats.txt to base and the location to the begining location.
     ofstream file;
     file.open("Player_Stats.txt");
     file << "name: \nhp: 12\ncon: 3\natk: 3\ndef: 3\ncha: 2\ntemp_hp: 12\nintel: 1\nwep: 1\nExp: 1\nlevel: 1\npotion: 3\nfireball: 0\n";
@@ -323,10 +323,36 @@ void new_game() {
     // Set begining location.
 }
 
-void character_name() {
+void character_name() { // Gets a name from the user for their character
     write_at(mem, 100, "Type in your character's name."); // Testing only
     string name = get_yaml_input2();
     set_value("Player_Stats_Test.txt", "name:", name);
+}
+
+void setup_monster() { // Sets up the template for a monster in Game.txt
+    ofstream file;
+    file.open("Game.txt");
+    file << "temp_hp: \ntitle: \ncr: \ngold: \nExp: \nhp: \natk: \ndef: \n\nDescription: \n\nvictory: \n\nPersuasion: \n\nrun: \n\nrob: \n\ndeath: \n";
+    file.close();
+}
+
+void make_monster(string mfile) { // Puts information about a monster into Game.txt
+    int temp_hp = stoi(get_value(mfile,"temp_hp:"));
+    string title = get_value(mfile,"title:");
+    int cr = stoi(get_value(mfile,"cr:"));
+    int gold = stoi(get_value(mfile,"gold:"));
+    int Exp = stoi(get_value(mfile,"Exp:"));
+    int hp = stoi(get_value(mfile,"hp:"));
+    int atk = stoi(get_value(mfile,"atk:"));
+    int def = stoi(get_value(mfile,"def:"));
+    set_value("Game_Test.txt", "temp_hp:", to_string(temp_hp));
+    set_value("Game_Test.txt", "title:", title);
+    set_value("Game_Test.txt", "cr:", to_string(cr));
+    set_value("Game_Test.txt", "gold:", to_string(gold));
+    set_value("Game_Test.txt", "Exp:", to_string(Exp));
+    set_value("Game_Test.txt", "hp:", to_string(hp));
+    set_value("Game_Test.txt", "atk:", to_string(atk));
+    set_value("Game_Test.txt", "def:", to_string(def));
 }
 
 int main() {
@@ -336,6 +362,9 @@ int main() {
         mem[600] = 0;
     }
 
+//    setup_monster();
+//    make_monster("Allosaurus.txt");
+
 //    new_game();
 //    character_name();
 //    god_mode();
@@ -343,14 +372,16 @@ int main() {
 //        func()
 
 //    if(state = "COMBAT")
-    {
+//    {
+/*
         PC Aarsanuvf("Player_Stats_Test.txt");
         Enemy monster("Game.txt");
         Inventory test;
         encounter(Aarsanuvf, monster, test);
         //Aarsanuvf.level_up();
-    }
-    if (get_yaml_input2() == "god mode") {
+*/
+//    }
+    if (get_yaml_input2() == "god mode") { // Cheat to be super powerful in game.
             set_value("Player_Stats.txt", "def:", "1000");
             set_value("Player_Stats.txt", "con:", "1000");
             set_value("Player_Stats.txt", "atk:", "1000");
