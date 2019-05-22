@@ -1,0 +1,26 @@
+Event: 
+Background: Fight a Monster_8.png
+Foregound:
+Back to: Region1
+Game State: Combat
+
+temp_hp: 20
+title: Palace guard
+cr:  2
+gold: 0
+Exp: 100
+hp: 20
+atk: 2
+def: 2
+
+Description: A palace guard for Azir.
+
+victory: The palace guard falls to your feet dead. YOu should leave before any others show up.
+
+persuasion: Within minutes you wrap the situation up with no loss of life. Clearly you, the esteemed ambasador from the Vising Empire had reason to explore the castle at your leisure. As the guard appologizes profusely for his misunderstanding, he offers you a bundle of gold to ensure you don't report this to his superiors.
+
+run: You elude the palace guard.
+
+rob: You find a purse you can line your pockets with.
+
+death: The place guard stands above you and brings down his sword to finish the job.

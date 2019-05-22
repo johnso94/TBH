@@ -1,0 +1,26 @@
+Event: 
+Background: Fight a Monster_8.png
+Foregound:
+Back to: Region1
+Game State: Combat
+
+temp_hp: 40
+title: goblin_warlord
+cr:  5
+gold: 0
+Exp: 1
+hp: 40
+atk: 5
+def: 5
+
+Description: A goblin warlord.
+
+victory: Congratulations. With this, Azir should be safe from attacks for the next few months
+
+persuasion: Congratulations! You are able to move the goblin's ire towards the necromancer, The Dark Lord: Master of Death, who has been killing goblins for months now
+
+run: You barely escape from the camp with your life. Next time, you'll have to come more prepared.
+
+rob: On the goblin you find some trinkets to line your pockets with.
+
+death: You fall to the ground, dead, as the goblin motions to some guards to haul your body out of his office.

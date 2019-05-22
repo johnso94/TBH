@@ -1,0 +1,28 @@
+Event: 
+Background: Fight a Monster_8.png
+Foregound:
+Back to: Region1
+Game State: Combat
+
+temp_hp: 70
+title: Vampire
+cr:  7
+gold: 0
+Exp: 70
+hp: 70
+atk: 7
+def: 7
+
+Description: A Vampire.
+
+victory: The Vampire crumbles to dust as you drive your sword into its chest, nearby you can see the ghostly family nod to you, then fade for the last time.
+
+Persuasion: You convince the vampire to curb it's bloodlust and consider reason for a second.
+It has good access to blood in this area but if it sticks around, eventually someone will track it down like you and kill it.
+THe Vampire appreciates the advice and leaves the town.
+
+run: You're able to elude the vampire by hiding behind some loose furniture in the house. Next time, you'll have to come more prepared.
+
+rob: You find a purse on the Vampire you can line your pockets with.
+
+death: The vampire rips into you and you can feel it as the life drains from your body along with your blood.

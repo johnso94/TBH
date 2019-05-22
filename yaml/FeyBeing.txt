@@ -1,0 +1,26 @@
+Event: 
+Background: Fight a Monster_8.png
+Foregound:
+Back to: Region1
+Game State: Combat
+
+temp_hp: 50
+title: Fey_Being
+cr:  5
+gold: 0
+Exp: 1
+hp: 50
+atk: 5
+def: 5
+
+Description: A fey being.
+
+victory: The fey being falls and you notice the glade lose a bit of its life in response.
+
+persuasion: You are able to convince the fey being to let you leave in peace.
+
+run: You excape the fey being with a great deal of effort. You probably shouldn't return here.
+
+rob: The fey being has nothing for you to rob.
+
+death: The being smiles as it gingerly steps over your corpse to return to the glade.

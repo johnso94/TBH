@@ -1,0 +1,26 @@
+Event: 
+Background: Fight a Monster_8.png
+Foregound:
+Back to: Region1
+Game State: Combat
+
+temp_hp: 100
+title: necromancer
+cr:  10
+gold: 0
+Exp: 100
+hp: 100
+atk: 10
+def: 10
+
+Description: The Dark Lord: Master of Death. If you fail to stop him here, the world will end.
+
+victory: The world is safe for now.
+
+persuasion: The Dark Lord responds very positively to the friendship you show him. You convince him to abandon his plans for world destruction and rejoin society.
+
+run: The necromancer cackles after you as you flee saying, "You can run wherever you like. When the world ends you'll die like the others."
+
+rob: The necromancer doesn't have any gold on him.
+
+death: As you fall, the necromancer starts chanting a spell.

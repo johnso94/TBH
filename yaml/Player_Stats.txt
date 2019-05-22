@@ -1,13 +1,13 @@
-name: Melf
+name: Aarsanuvf
 hp: 12
 con: 3
 atk: 3
 def: 3
 cha: 2
-temp_hp: 4
+temp_hp: 1
 intel: 1
 wep: 1
-Exp: 4
+Exp: 252
 level: 1
-potion: 3
+potion: 0
 fireball: 0
