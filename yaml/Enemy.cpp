@@ -16,6 +16,8 @@ void Enemy::die() {
     string output = "The ";
     output += title;
     output += " has died.\n";
+    output +=  get_value("Game.txt","victory:");
+    output += '\n';
     write_at(mem, 99+find_len(100), output.c_str());
 }
 

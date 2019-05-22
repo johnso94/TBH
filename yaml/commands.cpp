@@ -42,6 +42,7 @@ void fill_map(map<string, int> &actions){
     actions["fireball"] = 11;
     actions["imolate"] = 11;
     actions["BURN!"] = 11;
+    actions["drink"] = 12;
 }
 void fill_commands(vector<string> &commands){
     commands.push_back("attack");

@@ -176,7 +176,14 @@ void PC::level_up(){
     point += 1;
     set_value("Player_Stats.txt", stat, to_string(point));
     set_value("Player_Stats.txt", "level:", to_string(level));
-};
+}
+
 void PC::set_temp_hp(){
     set_value("Player_Stats.txt", "temp_hp:", to_string(temp_hp));
+}
+
+void PC::drink_potion() {
+    reset();
+    potion -= 1;
+    set_value("Player_Stats.txt", "potion:", to_string(potion));
 }

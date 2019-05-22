@@ -21,10 +21,14 @@ string get_yaml_input2()
 {
     string str_input;
     Range t_range = find_value(yaml, "content:");
-    char testing[t_range.len];
-    write_at(testing,0,yaml,t_range);
-    str_input = testing;
-    return str_input;
+    if (t_range.len == -1) {
+        return "";
+    } else {
+        char testing[t_range.len];
+        write_at(testing,0,yaml,t_range);
+        str_input = testing;
+        return str_input;
+    }
 }
 
 void screen(){ // Makes the basic Screen
@@ -245,6 +249,32 @@ void round(PC &player, Enemy &monster, string is, Inventory &inv)
             monster.missed_reset();
             break;
         }
+        case 12:
+        {
+            if (player.get_potion() > 0) {
+                player.drink_potion();
+                if (monster.get_hp() <= 0)
+                {
+                    //PlaceHolder returns the player to the location
+                    monster.give_wealth(inv);
+                    monster.give_exp(player);
+                    monster.die();
+                    break;
+                }
+                monster.action(player);
+                monster.missed_reset();
+                if (player.get_health() <= 0)
+                {
+                    // PlaceHolder here we would incorporate the deathsystem
+                    player.DIE();
+                    break;
+                }
+                }
+                else {
+                write_at(mem, 99+find_len(100), "You have no potions to drink.");
+                }
+            break;
+        }
         }
     }
 }
@@ -262,7 +292,6 @@ void encounter(PC &player, Enemy &monster, Inventory &inv)
         string output;
         string input;
         input = get_yaml_input2();
-        input = "rob"; // Testing only
         round(player, monster, input, inv);
         if (player.get_hp() > 0 && monster.get_hp() > 0) {
             output += '\n';
@@ -278,7 +307,7 @@ void encounter(PC &player, Enemy &monster, Inventory &inv)
         }
     } else {
         string output = "Combat end"; // Testing only
-        write_at(mem, 99+find_len(100), output.c_str()); // Testing only
+        write_at(mem, 100, output.c_str()); // Testing only
 
         // NAV stuf here
 
@@ -286,19 +315,55 @@ void encounter(PC &player, Enemy &monster, Inventory &inv)
     }
 }
 
+void new_game() {
+    ofstream file;
+    file.open("Player_Stats.txt");
+    file << "name: \nhp: 12\ncon: 3\natk: 3\ndef: 3\ncha: 2\ntemp_hp: 12\nintel: 1\nwep: 1\nExp: 1\nlevel: 1\npotion: 3\nfireball: 0\n";
+    file.close();
+    // Set begining location.
+}
+
+void character_name() {
+    write_at(mem, 100, "Type in your character's name."); // Testing only
+    string name = get_yaml_input2();
+    set_value("Player_Stats_Test.txt", "name:", name);
+}
+
 int main() {
     init();
-
     if (length_of(yaml) < 50) { // Sets up the game.
         mem[100] = 0;
         mem[600] = 0;
     }
 
-    PC Aarsanuvf("Player_Stats.txt");
-    Enemy monster("Game.txt");
-    Inventory test;
-    encounter(Aarsanuvf, monster, test);
-    // Aarsanuvf.level_up();
+//    new_game();
+//    character_name();
+//    god_mode();
+//    if(state == "NAV")
+//        func()
+
+//    if(state = "COMBAT")
+    {
+        PC Aarsanuvf("Player_Stats_Test.txt");
+        Enemy monster("Game.txt");
+        Inventory test;
+        encounter(Aarsanuvf, monster, test);
+        //Aarsanuvf.level_up();
+    }
+    if (get_yaml_input2() == "god mode") {
+            set_value("Player_Stats.txt", "def:", "1000");
+            set_value("Player_Stats.txt", "con:", "1000");
+            set_value("Player_Stats.txt", "atk:", "1000");
+            set_value("Player_Stats.txt", "level:", "1000");
+            write_at(mem, 100, "You have activated god mode. There is no going back.");
+    }
+
+    if (get_yaml_input2() == "quit") { // Exit condition
+            exit(EXIT_SUCCESS);
+    }
+
+
+
 
     yaml[0] = 0; // Gets yaml from server then sends an updated screen
     screen();

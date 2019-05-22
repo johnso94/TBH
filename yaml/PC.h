@@ -12,6 +12,7 @@ class PC:public fighter
     int wep;
     int EXP;
     int level;
+    int potion;
     string name;
 
 public:
@@ -27,12 +28,14 @@ public:
         cha = stoi(get_value("Player_Stats.txt","cha:"));
         def = stoi(get_value("Player_Stats.txt","def:"));
         wep = stoi(get_value("Player_Stats.txt","wep:"));
+        potion = stoi(get_value("Player_Stats.txt","potion:"));
     }
     void attack(Enemy &npc, string & is);
     void riposte(Enemy &npc, string & is);
     void heavy_attack(Enemy &npc, string & is);
     void light_attack(Enemy &npc, string & is);
     void fireball(Enemy &npc, string & is);
+    void drink_potion();
     void talk(Enemy &npc);
     void level_up();
     void gain_exp(int i)
@@ -57,6 +60,9 @@ public:
     int get_hp(){
         return temp_hp;
     }
+    int get_potion () {
+        return potion;
+    }
     int AC(){
         return def;
     }
@@ -70,6 +76,9 @@ public:
     }
     string named(){
         return name;
+    }
+    void set_name(string n) {
+        name = n;
     }
 };
 
