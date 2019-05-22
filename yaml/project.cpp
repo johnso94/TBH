@@ -16,6 +16,7 @@ int find_len2(int pos)
     return i;
 }
 
+// Gets user input from yaml
 string get_yaml_input2() 
 {
     string str_input;
@@ -40,6 +41,7 @@ void add_images(ifstream &m) { // Sets images for yaml
     add_yaml("image.yaml", {{"id", "Foreground"}, {"im", y.c_str()}, {"l", 225}, {"w", 330}, {"h", 430}});
 }
 
+// Starts a round of combat
 void round(PC &player, Enemy &monster, string is, Inventory &inv)
 {
     string output;
@@ -247,6 +249,7 @@ void round(PC &player, Enemy &monster, string is, Inventory &inv)
     }
 }
 
+// Starts a combat encounter
 void encounter(PC &player, Enemy &monster, Inventory &inv)
 {
     if (mem[600] == 0) {
@@ -277,7 +280,7 @@ void encounter(PC &player, Enemy &monster, Inventory &inv)
         string output = "Combat end"; // Testing only
         write_at(mem, 99+find_len(100), output.c_str()); // Testing only
 
-        
+        // NAV stuf here
 
         mem[600] = 0;
     }
