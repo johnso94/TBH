@@ -1,0 +1,14 @@
+
+Event: World
+Background: World_B.png
+Foreground: World_F.png
+Back to: Region1
+
+State: Fighting
+Monster Name: Deamon
+Monster Str: 20
+Monster Def: 10
+Monster Max Hp: 50
+Monster Current Hp: 20
+Monster Description: A Deamon emerges out of the flame
+

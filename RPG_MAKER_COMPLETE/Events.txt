@@ -1,0 +1,84 @@
+
+#############
+# Locations #
+#############
+
+World
+-
+Title : Greece
+-
+Ancient Greece wasn't a single country or empire united under a single government, it was made up of a number of city states.
+At the center of each city state was a powerful city. The city ruled the lands and area around it.
+Sometimes it also ruled smaller less-powerful cities. The Greek name for a city-state was polis.
+
+
+Place1
+-
+Title : Corinth
+Script : Explore Corinth
+-
+Corinth was a trade city in an ideal location that allowed it to have two seaports, one on the Saronic Gulf and one on the
+Corinthian Gulf. As a result, the city was one of the wealthiest cities in Ancient Greece.
+The Corinthians developed their own coins and required that traders use them when in their city.
+
+
+
+
+Place2
+-
+Title : Thebes
+Script : Explore Thebes
+-
+Thebes was a powerful city-state to the north of Corinth and Athens that was constantly 
+switching sides in the various Greek wars. During the Persian Wars they 
+originally sent men to Thermopylae to fight the Persians, 
+
+
+
+Place 3
+-
+Title : Argos
+Script : Explore Argos
+-
+Argos was one of the oldest city-states in Ancient Greece, but it first became a major power under the tyrant 
+Pheidon during the 7th century BC. During Pheidon's reign, 
+Argos introduced silver coins as well as a standard system of weights and 
+measures that later became known as the Pheidonian measures. 
+
+Falador
+-
+
+-
+Lumbridge
+Varrock
+Goblin Village
+
+
+
+
+
+
+##########
+# Select #
+##########
+
+
+Fight a Monster
+-
+Type    : Select
+Events : Goblin / Deamon / Ork / God / Minatour / Wisp / asdfasdf / Diablo
+Chance  : 10 / 10 / 10 / 1000 / 10 / 10 / 1 / 5
+Back to : Region2
+
+
+
+
+
+
+
+
+
+
+
+
+

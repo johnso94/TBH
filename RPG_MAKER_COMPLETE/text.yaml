@@ -1,0 +1,8 @@
+Text_{id}:
+  style:
+    marginLeft: 5
+    marginTeft: 5
+    color: black
+    fontSize: 15
+  pos: 100
+  len: 900
