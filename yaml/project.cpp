@@ -342,7 +342,9 @@ int main() {
 //    if(state == "NAV")
 //        func()
 
-//    if(state = "COMBAT")
+
+
+   if(state = "COMBAT")
     {
         PC Aarsanuvf("Player_Stats_Test.txt");
         Enemy monster("Game.txt");
