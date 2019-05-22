@@ -312,6 +312,7 @@ void encounter(PC &player, Enemy &monster, Inventory &inv)
         // NAV stuf here
 
         mem[600] = 0;
+        mem[601] = 0;
     }
 }
 
@@ -332,7 +333,7 @@ void character_name() { // Gets a name from the user for their character
 void setup_monster() { // Sets up the template for a monster in Game.txt
     ofstream file;
     file.open("Game.txt");
-    file << "temp_hp: \ntitle: \ncr: \ngold: \nExp: \nhp: \natk: \ndef: \n\nDescription: \n\nvictory: \n\nPersuasion: \n\nrun: \n\nrob: \n\ndeath: \n";
+    file << "temp_hp: \ntitle: \ncr: \ngold: \nExp: \n hp: \natk: \ndef: \n\nDescription: \n\nvictory: \n\nPersuasion: \n\nrun: \n\nrob: \n\ndeath: \n";
     file.close();
 }
 
@@ -345,14 +346,26 @@ void make_monster(string mfile) { // Puts information about a monster into Game.
     int hp = stoi(get_value(mfile,"hp:"));
     int atk = stoi(get_value(mfile,"atk:"));
     int def = stoi(get_value(mfile,"def:"));
-    set_value("Game_Test.txt", "temp_hp:", to_string(temp_hp));
-    set_value("Game_Test.txt", "title:", title);
-    set_value("Game_Test.txt", "cr:", to_string(cr));
-    set_value("Game_Test.txt", "gold:", to_string(gold));
-    set_value("Game_Test.txt", "Exp:", to_string(Exp));
-    set_value("Game_Test.txt", "hp:", to_string(hp));
-    set_value("Game_Test.txt", "atk:", to_string(atk));
-    set_value("Game_Test.txt", "def:", to_string(def));
+    string Description = get_value(mfile,"Description:");
+    string victory = get_value(mfile,"victory:");
+    string Persuasion = get_value(mfile,"Persuasion:");
+    string run = get_value(mfile,"run:");
+    string rob = get_value(mfile,"rob:");
+    string death = get_value(mfile,"death:");
+    set_value("Game.txt", "temp_hp:", to_string(temp_hp));
+    set_value("Game.txt", "title:", title);
+    set_value("Game.txt", "cr:", to_string(cr));
+    set_value("Game.txt", "gold:", to_string(gold));
+    set_value("Game.txt", "Exp:", to_string(Exp));
+    set_value("Game.txt", " hp:", to_string(hp));
+    set_value("Game.txt", "atk:", to_string(atk));
+    set_value("Game.txt", "def:", to_string(def));
+    set_value("Game.txt", "Description:", Description);
+    set_value("Game.txt", "victory:", victory);
+    set_value("Game.txt", "Persuasion:", Persuasion);
+    set_value("Game.txt", "run:", run);
+    set_value("Game.txt", "rob:", rob);
+    set_value("Game.txt", "death:", death);
 }
 
 int main() {
@@ -362,25 +375,9 @@ int main() {
         mem[600] = 0;
     }
 
-//    setup_monster();
-//    make_monster("Allosaurus.txt");
-
 //    new_game();
 //    character_name();
-//    god_mode();
-//    if(state == "NAV")
-//        func()
 
-//    if(state = "COMBAT")
-//    {
-/*
-        PC Aarsanuvf("Player_Stats_Test.txt");
-        Enemy monster("Game.txt");
-        Inventory test;
-        encounter(Aarsanuvf, monster, test);
-        //Aarsanuvf.level_up();
-*/
-//    }
     if (get_yaml_input2() == "god mode") { // Cheat to be super powerful in game.
             set_value("Player_Stats.txt", "def:", "1000");
             set_value("Player_Stats.txt", "con:", "1000");
@@ -393,7 +390,12 @@ int main() {
             exit(EXIT_SUCCESS);
     }
 
-
+    setup_monster();
+    make_monster("GoblinScout.txt");
+    PC Aarsanuvf("Player_Stats.txt");
+    Enemy monster("Game.txt");
+    Inventory test;
+    encounter(Aarsanuvf, monster, test);
 
 
     yaml[0] = 0; // Gets yaml from server then sends an updated screen
