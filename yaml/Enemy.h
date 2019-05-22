@@ -49,8 +49,12 @@ public:
     void display();
     void set_temp_hp();
     void block(){
+        string output;
         blocked = 1;
-        cout << "you block the" << title << "'s next attack" << endl;
+        output += "You block the ";
+        output += title;
+        output += "'s next attack.\n";
+        write_at(mem, 99+find_len(100), output.c_str());
     }
     void escape(){
         escaped = 1;

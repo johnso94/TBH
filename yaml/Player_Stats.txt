@@ -4,9 +4,9 @@ con: 3
 atk: 3
 def: 3
 cha: 2
-temp_hp: 0
+temp_hp: 2
 intel: 1
 wep: 1
-Exp: 1
+Exp: 32
 level: 1
 fireball: 0

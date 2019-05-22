@@ -72,17 +72,3 @@
         }
         return value;
     }
-    int find_len(int pos) { // returns the pos of a string of chars starting at mem[pos].
-    int i = 0;
-    while (mem[(i++)+pos] != 0);
-    return i;
-    }
-
-    string get_yaml_input() {
-        string str_input;
-        Range t_range = find_value(yaml, "content:");
-        char testing[t_range.len];
-        write_at(testing,0,yaml,t_range);
-        str_input = testing;
-        return str_input;
-    }

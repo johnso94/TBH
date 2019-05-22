@@ -4,7 +4,7 @@ Foregound:
 Back to: Region1
 Game State: Combat
 
-temp_hp: 2
+temp_hp: 10
 title: goblin_scout
 cr:  0
 gold: 0

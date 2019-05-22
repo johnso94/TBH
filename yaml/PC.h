@@ -61,8 +61,8 @@ public:
         return def;
     }
     void DIE(){
-         string is = get_value("Game.txt","death:");
-         cout << is;
+         string output = get_value("Game.txt","death:");
+         write_at(mem, 99+find_len(100), output.c_str());
     }
     void set_temp_hp();
     void set_hp(){

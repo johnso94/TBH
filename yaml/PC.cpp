@@ -2,7 +2,22 @@
 #include "Enemy.h"
 #include"sd_fun.h"
 
+int find_len(int pos) 
+{ // returns the pos of a string of chars starting at mem[pos].
+    int i = 0;
+    while (mem[(i++)+pos] != 0);
+    return i;
+}
 
+string get_yaml_input() 
+{
+    string str_input;
+    Range t_range = find_value(yaml, "content:");
+    char testing[t_range.len];
+    write_at(testing,0,yaml,t_range);
+    str_input = testing;
+    return str_input;
+}
 
 void PC::attack(Enemy &monster, string & is)
 {
@@ -17,11 +32,11 @@ void PC::attack(Enemy &monster, string & is)
         output += "You ";
         output += is += " the ";
         output += monster.name() += '\n';
-        write_at(mem, 100+find_len(100), output.c_str());
+        write_at(mem, 99+find_len(100), output.c_str());
     }
     else{
         output += "Your attack misses\n";
-        write_at(mem, 100+find_len(100), output.c_str());
+        write_at(mem, 99+find_len(100), output.c_str());
     }
 }
 void PC::riposte(Enemy &monster, string & is)
@@ -37,13 +52,13 @@ void PC::riposte(Enemy &monster, string & is)
         output += "You counter the ";
         output += monster.name() += "'s attack.\n";
         output += "It takes ";
-        output += damage;
+        output += to_string(damage);
         output += " damage.\n";
-        write_at(mem, 100+find_len(100), output.c_str());
+        write_at(mem, 99+find_len(100), output.c_str());
     }
     else{
         output += "Your attack misses\n";
-        write_at(mem, 100+find_len(100), output.c_str());
+        write_at(mem, 99+find_len(100), output.c_str());
     }
 }
 void PC::heavy_attack(Enemy &monster, string & is){
@@ -56,18 +71,19 @@ void PC::heavy_attack(Enemy &monster, string & is){
         monster.take_damage(damage, is);
         monster.set_temp_hp();
         output += "You bring the full wieght of your blade down upon the ";
-        output += monster.name() += '.\n';
+        output += monster.name() += ".\n";
         output += "It takes ";
-        output += damage;
+        output += to_string(damage);
         output += " damage.\n";
-        write_at(mem, 100+find_len(100), output.c_str());
+        write_at(mem, 99+find_len(100), output.c_str());
     }
     else{
         output += "Your attack misses";
-        write_at(mem, 100+find_len(100), output.c_str());
+        write_at(mem, 99+find_len(100), output.c_str());
     }
 }
 void PC::light_attack(Enemy &monster, string & is){
+    string output;
     srand(time(0));
     int roll = rand() % 20 + 1;
     if (roll + 2 * atk > monster.AC())
@@ -75,45 +91,61 @@ void PC::light_attack(Enemy &monster, string & is){
         int damage = rand() % 6 + wep;
         monster.take_damage(damage, is);
         monster.set_temp_hp();
-        cout << "You nimbly slice at the " << monster.name() << '.' << endl;
-        cout << "It takes " << damage <<" damage." << endl;
+        output += "You nimbly slice at the ";
+        output += monster.name() += ".\n";
+        output += "It takes ";
+        output += to_string(damage);
+        output += " damage.\n";
+        write_at(mem, 99+find_len(100), output.c_str());
     }
     else{
-        cout << "Your attack misses" << endl;
+        output += "Your attack misses\n";
+        write_at(mem, 99+find_len(100), output.c_str());
     }
 }
 void PC::fireball(Enemy &monster, string & is){
+    string output;
     srand(time(0));
     int roll = rand() % 20 + 1;
     if (roll + intel> monster.AC())
     {
-        int damage = 2 * rand() % 6 + intel;
+        int damage = (2 * (rand() % 6)) + intel;
         monster.take_damage(damage, is);
         monster.set_temp_hp();
-        cout << "You " << is << " the " << monster.name() << endl;
-        cout << "It takes " << damage <<" damage." << endl;
+        output += "You ";
+        output += is;
+        output += " the ";
+        output += monster.name() += '\n';
+        output += "It takes ";
+        output += to_string(damage);
+        output += " damage.\n";
+        write_at(mem, 99+find_len(100), output.c_str());
     }
     else{
-        cout << "Your attack misses" << endl;
+        output += "Your attack misses\n";
+        write_at(mem, 99+find_len(100), output.c_str());
     }
 }
 void PC::talk(Enemy &monster)
 {
+    string output;
     srand(time(0));
     int roll = rand() % 20 + 1;
     if (roll + cha > 10 + 5 * (monster.get_hp())/(monster.total_hp()) + monster.return_CR()- (return_level()/4))
     {
         monster.convince();
-        string is =  get_value("Game.txt","persuasion:");
-        cout << is << endl;
+        output =  get_value("Game.txt","persuasion:");
+        output += '\n';
+        write_at(mem, 99+find_len(100), output.c_str());
     }
 }
 void PC::run(Enemy &monster){
     srand(time(0));
     int roll = rand() % 20 + 1;
     if (roll + level/2 > 10 + monster.return_CR()){
-        string is =  get_value("Game.txt","run:");
-        cout << is << endl;
+        string output =  get_value("Game.txt","run:");
+        output += '\n';
+        write_at(mem, 99+find_len(100), output.c_str());
         monster.escape();
     }
 }
@@ -121,18 +153,22 @@ void PC::steal(Enemy &monster, Inventory &inv){
     srand(time(0));
     int roll = rand() % 20 + 1;
     if (roll > 10 + monster.return_CR() - return_level()/4){
-        string is =  get_value("Game.txt","rob:");
-        cout << is << endl;
+        string output =  get_value("Game.txt","rob:");
+        output += '\n';
+        write_at(mem, 99+find_len(100), output.c_str());
     }
 }
 void PC::level_up(){
+    string output;
     level ++;
     string stat;
-    cout << "Type in stat to level up" << endl;
+    output = "Type in stat to level up\n";
+    write_at(mem, 99+find_len(100), output.c_str());
     while(stat != "con" && stat != "atk" && stat != "def" && stat != "cha" && stat != "intel"){
-        cin >> stat;
+        stat = get_yaml_input();
         if (stat != "con" && stat != "atk" && stat != "def" && stat != "cha" && stat != "intel")
-            cout << "Error, wrong message" << endl;
+            output = "Error, wrong message.\n";
+            write_at(mem, 99+find_len(100), output.c_str());
     }
 
     stat += ':';
