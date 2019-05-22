@@ -1,0 +1,296 @@
+The Forest of Doubt {}                                                               
+    - 
+    The Forest of Doubt was once the epicentre of the great empire of Laipiviel. 
+    Laipiviel has long since fallen to ruin, however,
+    and the forest is now only inhabited by roving goblin warbands. 
+    What would you like to do?                            
+    -                                                               
+    Explore the Forest of Doubt  {}
+        -
+        During some quick scouting, you notice some locations 
+        that might be of interest to you. There is a cave which may
+        house treasures of some sort. Nearby
+         there's a goblin camp you could farm for experience.
+        -                                                             
+        Cave     {}
+            -
+            You look through the cave for a while, but ultimately
+             you can't find anything worth keeping.
+            -                                                          
+        Goblin lair  {}       
+            -
+            You have successfully lead a goblin away from the lair to fight it one-on-one. Enraged, the Goblin
+            charges towards you. Initiate Combat
+            -                                                 
+    -                                    
+    @Azir                                               {}                
+    @The Iron Mountains                                 {}                              
+    @Jungle                                             {}                  
+    @Dead Battlefield                                   {}    
+    -
+
+
+Untouched Meadow                                        {}         
+    -
+    You find a pleasant meadow 
+    somehow completely unspoiled by the outside.
+    -              
+    Explore the Untouched Meadow                        {}     
+        -
+        After a quick examination you find 
+        nothing that could explain this phenomenon.
+         Maybe if you waited, something would happen.
+        -                                  
+        Wait                                            {}     
+            -
+            After hours of waiting, night starts to fall and with it, 
+            you see fey-like being emerge from the underbrush. 
+            One of these beings notices you and readies a cruel blade. Initiate Combat
+            -                 
+    -          
+    @Green Forest                                       {}                        
+    @River Valley                                       {}  
+    -                                                
+
+
+
+River Valley                                            {}    
+    -
+    The River Valley houses the Great River, 
+    one of the largest inland rivers people know about. 
+    The runoff from the Great River has led to abundant, 
+    fertile lands in the neigboring regions and plays a
+     large role in the continued economic
+    sucess of the kingdom of Azir.
+    -
+    Explore the river valley                            {}    
+        -
+        In the valley you can find several farms and plantations that utilize the river. 
+        In addition, you could spend some time around the river and recuperate.
+        -                               
+        visit the farms                                 {}       
+            -
+            Overall the farmers don't know much that could be of use to you. 
+            Despite this, You learn of a meadow west here that people avoid 
+            for fear of beings that appear at nighttime.
+            -                      
+        rest by the river                               {}     
+            -
+            Overall, your rest was very relaxing and you 
+            find yourself feeling reinvigorated.
+            -         
+    -                                     
+    @Grasslands                                         {}                      
+    @Farmlands                                          {}                     
+    @Untouched Meadow                                   {}  
+    -                          
+Farmlands                                               {}                
+    -
+    The farms in this area benefit from their
+     proximity to the Great River and are fairly well off.
+    -
+    Find out information from the farmers               { Back = Farmlands }     
+        -
+        The farmers are reluctant to open up to an outsider but you can glean from your interactions that something is going very wrong. Everyone is tense and suspicious and
+        everywhere you look you can see families grieving.
+        -                                           
+        Investigate the matter further                  { Back = Farmlands }             
+            -
+            After questioning a couple of families you find a woman who's willing to discuss the matter with you. She tells you that cattle and livestock have been dissappearing for months
+            now but no one really paid attention to the issue until four days ago when many people, including her fiancée, started dissappearing at a frightening rate. She asks you
+            to bring him back or, at the very least, to avenge him.
+            -                                
+            Examine the dissappearings                  { Back = Farmlands }     
+                -
+                Through examining where the people and animials have gone missing, you get a good idea of where the perpetrator is acting from. You track the culprit to a barn that was abandoned after
+                its residents were murdered and which the local farmers believe is haunted by their ghosts.    
+                -                                    
+                Examine the barn                        { Back = Farmlands }    
+                    -
+                    As you step inside the barn, you see wisps coalesce and form the image of a ghostly family. The mother stares at you then points to the basement. With this,
+                    the wisps begin to fade.    
+                    -                               
+                    Go into the basement                { Back = Farmlands }    
+                        -
+                        When you open the basement door you are hit by the scent of iron. No ... it's blood. You ready yourself and descend the stairs finding a room littered with the husks of human Corpses.
+                        In the middle of the room is a vampire draining the blood from a young man You have no time to react before the vampire, in a frenzy, charges towards you, desperate for more blood. Initiate Combat                                       
+                        -
+    -                
+    @Travel North                                       {}                        
+    @Azir                                               {}                
+    @Rich Grasslands                                    {}                           
+    @River Valley                                       {}   
+    -                     
+Rich Grasslands                                         {}                      
+    Explore the rich grasslands                         {}                                      
+        Runes                                           {}                    
+            Explore the structure                       {}                                        
+            @Rich Grasslands                            {}                                   
+        @Rich Grasslands                                {}                               
+    @travel North                                       {}                        
+    @Non-descript Plains                                {}                               
+    @Uncharted Depths                                   {}                            
+    @Farmlands                                          {}                     
+Uncharted Depths                                        {}                       
+    @Travel North                                       {}                        
+    @Wilderness                                         {}                      
+    travel East                                         {}                      
+        travelling East                                 {}                              
+    @Rich Grasslands                                    {}                           
+Green Forest                                            {}                   
+    wander around                                       {}                        
+    @Untouched Meadow                                   {}                            
+    @Goblin Fortress                                    {}                           
+    @Grasslands                                         {}                      
+    @travel West                                        {}                       
+Grasslands                                              {}                 
+    Go Hunting                                          {}                     
+    @River Valley                                       {}                        
+    @Dead Battlefield                                   {}                            
+    @Azir                                               {}                
+    @Green Forest                                       {}                        
+Azir                                                    {}           
+    Explore the Kingdom                                 {}                              
+        The Castle                                      {}                         
+        The MarketPlace                                 {}                              
+        Sparring Grounds                                {}                               
+    @Farmlands                                          {}                     
+    @The Forest of Doubt                                {}                               
+    @Non-descript Plains                                {}                               
+    @Peaceful Grasslands                                {}                               
+Non-descript plains                                     {}                          
+    Explore non-descript plains                         {}                                      
+            Runes2                                      {}                         
+                Explore the structure2                  {}                                             
+            @Non-descript Plains                        {}                                       
+        @Non-descript Plains                            {}                                   
+    @Rich Grasslands                                    {}                           
+    @Jungle                                             {}                  
+    @Wilderness                                         {}                      
+    @Azir                                               {}                
+Wilderness                                              {}                 
+    Go and Hunt                                         {}                      
+    @Uncharted Depths                                   {}                            
+    @Savanna                                            {}                   
+    @travel East                                        {}                       
+    @Non-descript Plains                                {}                               
+Goblin Fortress                                         {}                      
+    Expamine the Goblin Fortress                        {}                                       
+        Goblin Warrior                                  {}                             
+        Goblin Warlord                                  {}                             
+    @Green Forest                                       {}                        
+    @The Great Expanse                                  {}                             
+    @Dead Battlefield                                   {}                            
+    @travel West                                        {}                       
+Dead Battlefield                                        {}                       
+    Explore the Battlefield                             {}                                  
+        kill the zombie                                 {}                              
+        @Dead Battlefield                               {}                                
+    @Grasslands                                         {}                      
+    @Mountain Range                                     {}                          
+    @Forest of Doubt                                    {}                           
+    @Goblin Fortress                                    {}                           
+Jungle                                                  {}             
+    Explore Jungle                                      {}                         
+        look for temple                                 {}                              
+        @Jungle                                         {}                      
+            loot temple                                 {}                              
+            @Jungle                                     {}                          
+    @Non-descript Plains                                {}                               
+    @Dormant Volcano                                    {}                           
+    @Savanna                                            {}                   
+    @The Forest of Doubt                                {}                               
+Savanna                                                 {}              
+    Explore the Savanna                                 {}                              
+        Runes3                                          {}                     
+            Explore the structure3                      {}                                         
+            @Savanna                                    {}                           
+        @Savanna                                        {}                       
+    @Wilderness                                         {}                      
+    @Desert                                             {}                  
+    @travel East                                        {}                       
+    @Jungle                                             {}                  
+The Great Expanse                                       {}                        
+    @Goblin Fortress                                    {}                           
+    @Necromancer's Lair                                 {}                              
+    @Mountain Range                                     {}                          
+    @travel West                                        {}                       
+Mountain Range                                          {}                     
+    Abandoned Mine2                                     {}                          
+    @Dead Battlefield                                   {}                            
+    @Tundra                                             {}                  
+    @Iron Mountains                                     {}                          
+    @The Great Expanse                                  {}                             
+The Iron Mountains                                      {}   
+    -
+    The Iron Mountains were once a bastion of Dwarven Culture in the human lands. Since the Exodus, however, they
+    now only serve as a reminder that dwarves once dwelt in these lands
+    -                      
+    Explore the Mountains                               {}                                
+        Abandoned Mine                                  {}                             
+        Ruins of Dwarf Fortress                         {}                                      
+    @The Forest of Doubt                                {}                               
+    @The Vising Empire                                  {}                             
+    @Dormant Volcano                                    {}                           
+    @Mountain Range                                     {}                          
+Dormant Volcano                                         {}                      
+    Enter Dormant Volcano                               {}                                
+        jump in                                         {}                      
+            are you sure                                {}                               
+            @Dormant Volcano                            {}                                   
+        @Dormant Volcano                                {}                               
+    @Jungle                                             {}                  
+    @Dead Forest                                        {}                       
+    @Desert                                             {}                  
+    @Iron Mountains                                     {}                          
+Desert                                                  {}             
+    Explore the Desert                                  {}                             
+        Nomad Traders                                   {}                            
+        Oasis                                           {}                    
+    @Savanna                                            {}                   
+    @Desolate Wasteland                                 {}                              
+    @travel East                                        {}                       
+    @Dormant Volcano                                    {}                           
+Necromancer's Lair                                      {}                         
+    Enter the Lair                                      {}                         
+        Fight the Minions                               {}                                
+            Fight the Necromancer                       {}                                        
+            @Necromancer's Lair                         {}                                      
+        @Necromancer's Lair                             {}                                  
+    @Necromancer's Lair                                 {}                              
+    @The Great Expanse                                  {}                             
+    travel South                                        {}                       
+        travelling South                                {}                               
+    @Tundra                                             {}                  
+    @travel West                                        {}                       
+Tundra                                                  {}             
+    @Mountain Range                                     {}                          
+    @travel South                                       {}                        
+    @Vising Empire                                      {}                         
+    @Necromancer's Lair                                 {}                              
+Vissing Empire                                          {}                     
+    Explore the Empire                                  {}                             
+        Visit the Castle                                {}                               
+        @Vissing Empire                                 {}                              
+    @Iron Mountains                                     {}                          
+    @travel South                                       {}                        
+    @Dead Forest                                        {}                       
+    @Tundra                                             {}                  
+Dead Forest                                             {}                  
+    Explore Dead Forest                                 {}                              
+        talk to witch                                   {}                            
+            back                                        {}                       
+        @Dead Forest                                    {}                           
+    @Dormant Volcano                                    {}                           
+    @travel South                                       {}                        
+    @Desolate Empire                                    {}                           
+    @Vising Empire                                      {}                         
+Desolate Wasteland                                      {}                         
+    @Desert                                             {}                  
+    @travel South                                       {}                        
+    @travel East                                        {}                       
+    @Dead Forest                                        {}     
+
+
+
+

@@ -1,0 +1,635 @@
+#############
+# Locations #
+#############
+
+The Forest of Doubt
+-
+Title : The Forest of Doubt
+Script : The forest of Doubt
+-
+The Forest of Doubt was once the epicentre of the great empire of Laipiviel. Laipiviel has long since fallen to ruin, however,
+and the forest is now only inhabited by roving goblin warbands. What would you like to do?
+
+
+Explore the Forest of Doubt
+-
+Title : The Forest of Doubt
+Script : Explore the forest
+-
+During some quick scouting, you notice some locations that might be of interest to you. There is a cave which may
+house treasures of some sort. Nearby, there's a goblin camp you could farm for experience.
+
+
+Explore the Forest of Doubt
+-
+Title : The Forest of Doubt
+Script : Explore the forest
+-
+During some quick scouting, you notice some locations that might be of interest to you. There is a cave which may
+house treasures of some sort. Nearby, there's a goblin camp you could farm for experience.
+
+
+Cave
+-
+Title : Cave
+Script : Explore the cave
+-
+You look through the cave for a while, but ultimately you can't find anything worth keeping.
+
+
+Goblin lair
+-
+Title : Goblin lair
+Script : Draw off a goblin to kill
+-
+You have successfully lead a goblin away from the lair to fight it one-on-one. Enraged, the Goblin
+charges towards you. Initiate Combat
+
+Untouched Meadow
+-
+Script : go to the Untouched Meadow
+-
+You find a pleasant meadow somehow completely unspoiled by the outside.
+
+
+Explore the Untouched Meadow
+-
+Title : Untouched Meadow
+Script : Explore the Meadow
+-
+After a quick examination you find nothing that could explain this phenomenon. Maybe if you waited, something would happen.
+
+
+Wait
+-
+Title : Waiting for something to happen.
+Script : Wait for something to happen
+-
+After hours of waiting, night starts to fall and with it, you see fey-like being emerge from the underbrush. One of these beings notices you and readies a cruel blade. Initiate Combat
+
+
+River Valley
+-
+Script : travel to the River Valley
+-
+The River Valley houses the Great River, one of the largest inland rivers people know about. The runoff from the Great River has led to abundant, fertile lands in the neigboring regions and plays a large role in the continued economic sucess of the kingdom of Azir.
+
+
+Explore the River Valley
+-
+Title : the River Valley
+Script : Explore the River Valley
+-
+In the valley you can find several farms and plantations that utilize the river. In addition, you could spend some time around the river and recuperate.
+
+
+visit the farms
+-
+Title : farms along the River Valley
+Script : Visit some nearby farms
+-
+Overall the farmers don't know much that could be of use to you. Despite this, You learn of a meadow west here that people avoid for fear of beings that appear at nighttime.
+
+rest by the river
+-
+Title : The Great River
+Script : rest by the Great River
+-
+Overall, your rest was very relaxing and you find yourself feeling reinvigorated.
+
+
+Farmlands
+-
+Script : travel to the Farmlands
+-
+The farms in this area benefit from their proximity to the Great River and are fairly well off.
+
+
+Find out information from the farmers
+-
+Title : Farmlands
+Script : Find out information from the farmers
+-
+The farmers are reluctant to open up to an outsider but you can glean from your interactions that something is going very wrong. Everyone is tense and suspicious and
+everywhere you look you can see families grieving.
+
+
+Investigate the matter further
+-
+Title : Farmlands
+Script : Question some of the grieving farmers
+-
+After questioning a couple of families you find a woman who's willing to discuss the matter with you. She tells you that cattle and livestock have been dissappearing for months
+now but no one really paid attention to the issue until four days ago when many people, including her fiancée, started dissappearing at a frightening rate. She asks you
+to bring him back or, at the very least, to avenge him.
+
+
+Examine the dissappearings
+-
+Title : Farmlands
+Script : Examine where people have disappeared
+-
+Through examining where the people and animials have gone missing, you get a good idea of where the perpetrator is acting from. You track the culprit to a barn that was abandoned after
+its residents were murdered and which the local farmers believe is haunted by their ghosts.
+
+
+Examine the barn
+-
+Title : Haunted Barn
+Script : Investigate the Barn
+-
+As you step inside the barn, you see wisps coalesce and form the image of a ghostly family. The mother stares at you then points to the basement. With this,
+the wisps begin to fade.
+
+
+Go into the basement
+-
+Title : Basement
+Script : go into the basement
+-
+When you open the basement door you are hit by the scent of iron. No ... it's blood. You ready yourself and descend the stairs finding a room littered with the husks of human Corpses.
+In the middle of the room is a vampire draining the blood from a young man You have no time to react before the vampire, in a frenzy, charges towards you, desperate for more blood. Initiate Combat
+
+
+Rich Grasslands
+-
+Title : Rich Grasslands
+Script : Travel to the Rich Grasslands
+-
+The Rich Grasslands are a relatively uninteresting area, if you look around you might find sometheing to do, but I doubt it.
+
+
+Explore the rich grasslands
+-
+Title : Rich Grasslands
+Script : Look around the Rich Grasslands for something to do.
+-
+You find runes scattered around the ground, seemingly in some sort of patter.
+
+
+Runes
+-
+Title : Runes
+Script : Investigate the Runes
+-
+Upon exploring the area, you find a structure underground.
+
+
+Explore the structure
+-
+Title : The underground structure
+Script : Explore the Structure
+-
+As you look around the structure, you are continously ambushed by cultists and, while they're fairly easy to fend off, one
+of them is able to complete a summoning ritual before you can kill him. The demon he summons stares at you for a second
+before grinning and sauntering up to you. Initiate combat
+
+
+Uncharted Depths
+-
+Title : The Uncharted Depths
+Script : Travel to the Uncharted Depths
+-
+The site of a great canyon through the Earth. The area is impossible to explore, hence the title Uncharted Depths.
+
+
+Green Forest
+-
+Title : the Green Forest
+Script : Travel to the Green Forest
+-
+A non-desceprit forest. Well, non-descript other than the fact that its green. If you want something to do, you can look around.
+
+
+wander around
+-
+Title : wandering around the Green Forest
+Script : Wander around trying to find something
+-
+While looking around, you are ambushed by a goblin scout. Initiate combat.
+
+
+Grasslands
+-
+Title : Grasslands
+Script : Travel to the grasslands
+-
+A set of grasslands near the River Valley. While the land is as abundant as the nearby Farmlands, the local animals make farming unfeasable.
+
+
+Go Hunting
+-
+Title : hunting in the Grasslands
+Script : Go hunting in the grasslands
+-
+You track down a wild boar. Initiate combat
+
+
+Azir
+-
+Title : Kingdom of Azir
+Script : Go to the Kingdom of Azir
+-
+The Kingdom of Azir was founded by adventurers a little over a century ago. Since then it has risen
+to prominence and is now one of the most powerful countries in the world.
+
+
+Explore the Kingdom
+-
+Title : Kindom of Azir
+Script : Explore the Kingdom
+-
+In the Kingdom are many locations to explore but the one's which would hold the most interest to you,
+as an adventurer are the Castle, the marketplace, and the sparring grounds.
+
+
+The Castle
+-
+Title : Castle
+Script : Explore the Castle
+-
+The Castle is as impressive as you would imagine for a kingdom of this size. Everywhere you look, you find
+objects or paintings demonstrating the extravagence the inhabitants live with. How did you get inside the Castle
+by the way? This should only be open to the royal family and their personal guards. In response to this thought
+a guard nearby notices your presence and moves to block your path. Initiate combat
+
+
+Non-descript Plains
+-
+Title : nondescript Plains
+Script : travel to the non-descript Plains
+-
+What do you want here? It's in the name: nondescript. There's absolutely nothing here.
+
+
+Explore the Plains
+-
+Title : nondescript Plains
+Script : Look around the nondescript Plains.
+-
+You find runes scattered around the ground, seemingly in some sort of patter.
+
+
+Runes2
+-
+Title : Runes
+Script : Investigate the Runes
+-
+Upon exploring the area, you find a structure underground.
+
+
+Explore the structure2
+-
+Title : The underground structure
+Script : Explore the Structure
+-
+As you look around the structure, you are continuously ambushed by cutlists and, while they're fairly easy to fend off, one
+of them is able to complete a summoning ritual before you can kill him. The demon he summons stares at you for a second
+before grinning and sauntering up to you. Initiate combat
+
+
+Wilderness
+-
+Script : Travel to the Wilderness
+-
+Here, there's nothing but wilderness. Now and then, people have tried to inhabit these lands but every time, they find that the Wilderness absolutely refuses to be tamed.
+
+
+Go and Hunt
+-
+Title : Go Hunting
+Script : Go hunting
+-
+While you move through the area looking for quarry, you quickly find that you are the hunted as an allosaurus leaps from the underbrush at you. Initiate combat.
+
+
+Goblin Fortress
+-
+Script : Travel to the Goblin Fortress
+-
+This is a goblin fortress a bastion for goblins from which they can lauch raids on their neighbors. If you were to successfully kill a goblin warlords here, it would
+prevent the goblins from carrying out any attacks in the near future.
+
+
+Goblin Warrior
+-
+Title : Goblin Fortress
+Script : Try to kill a goblin warrior as it makes a patrol of the area.
+-
+As the goblin spots you moving towards it, it lets out a warcry and charges you. Initiate Combat
+
+
+Goblin Warlord
+-
+Title : Goblin Fortress
+Script : Try to sneak into the fortress and dispatch a warlord when it's alone
+-
+You successfully sneak into the camp and find a warlord in its office, going over plans for an attack on Azir. Initiate combat
+
+
+Dead Battlefield
+-
+Title : The Battle of Ruitia
+Script : Travel to the Battle of Ruitia
+-
+Decades ago, when the kingdom and Azir and the Vising were at war, this site served as the penultimate battlefield. Even now, corpses still litter the ground and people
+frequently report seeing things shambling around in the area.
+
+
+Explore the Battlefield
+-
+Title : The Battle of Ruitia
+Script : explore the Battlefield
+-
+While looking around you see a zombie collecting corpses and putting them into a sled. It is probably collecting corpses for a necromancer to work with.
+
+
+kill the zombie
+-
+Title : The Battle of Ruitia
+Script : Kill the zombie
+-
+The zombie looks up at you as you approach it. Implement combat
+
+
+Jungle
+-
+Script : Travel to the Jungle
+-
+A jungle which has grown up over the years. For some reason, you think that you can find an abandoned temple in the area.
+
+
+Look for temple
+-
+Title : Jungle
+Script : Look for a temple in the area
+-
+After a bit of searching you find an abandoned temple you can explore. Going through will probably mean finding some treaure but you will also take damage from whatever traps remain
+
+
+loot temple
+-
+Title : Jungle
+Script : Explore the temple
+-
+As expected, you find some treasure but accidently trigger a dart trap on your way out.
+
+
+Savanna
+-
+Title : Savanna
+Script : Travel to the Savanna
+-
+A Savanna in the middle of nowhere. There is nothing to do here.
+
+
+Runes3
+-
+Title : Runes
+Script : Investigate the Runes
+-
+Upon exploring the area, you find a structure underground.
+
+
+Explore the structure3
+-
+Title : The underground structure
+Script : Explore the Structure
+-
+As you look around the structure, you are continously ambushed by cutlists and, while they're fairly easy to fend off, one
+of them is able to complete a summoning ritual before you can kill him. The demon he summons stares at you for a second
+before grinning and sauntering up to you. Initiate combat
+
+
+The Great Expanse
+-
+Title : The Great Expanse
+Script : Travel to the Great Expanse
+-
+The Great Expanse stands as the no-mans-land separating the goblin armies and the necromancer "The Dark Lord: Master of Death". All over the place, you can see signs of battle,
+yet no corpses.
+
+
+Mountain Range
+-
+Title : Mountain Range
+Script : Travel to the Mountain Range
+-
+An unremarkable range of mountains. Near where you stand is a mine you could explore.
+
+
+Abanoned Mine2
+-
+Title : The Abandoned Mine
+Script : look around the abandoned mine
+-
+While wandering the mine you encounter a pile of bones that rattles around before merging to create some skeleton monstrosity. Initiate Combat
+
+
+The Iron Mountains
+-
+Title : The Iron Mountains
+Script : Go to the Iron Mountains
+-
+The Iron Mountains were once a bastion of Dwarven Culture in the human lands. Since the Exodus, however, they
+now only serve as a reminder that dwarves once dwelt in these lands
+
+
+Explore the Mountains
+-
+Title : The Iron Mountains
+Script : Explore the Iron Mountains
+-
+Looking around there are two locations of interest to you: an Abandoned Mine and the Ruins of a Dwarven Fortress.
+
+
+Abanoned Mine
+-
+Title : The Abandoned Mine
+Script : look around the abandoned mine
+-
+While wandering the mine you encounter a pile of bones that rattles around before merging to create some skeleton monstrosity. Initiate Combat
+
+
+Ruins of Dwarf Fortress
+-
+Title : Ruins of a Dwarf Fortress
+Script : Look for loot in the Fortress
+-
+It looks like treasure hunters have already mostly picked the place clean, however, you do find enough gold to make it worth your while.
+Initiate treasure
+
+
+Dormant Volcano
+-
+Title : Dormant Volcano
+Script : Travel to the Dormant Volcano
+-
+A dormant volcano. Looking around, it seems like there's a crack you could travel through to inside the volcano
+
+
+Enter Dormant Volcano
+-
+Title : Dormant Volcano(interior)
+Script : Go inside the volcano.
+-
+From here you can see the magma that remains under the cooled surface. You're still a distance away from any magma yet your skin feels as though it's on fire and your throat burns.
+
+
+jump in
+-
+Title : Dormant Volcano(interior)
+Script : Jump into the magma.
+Wait, what! You undertand this is magma. Even where you are standing, continued exposure
+will mess with your body. Do you really want to do this despite knowing that you'll surely die.
+
+
+Title : Dormant Volcano(interior)
+Script : Jump into the magma.
+
+
+are you sure
+-
+Title :  Dormant Volcano(interior)
+Script : Yes I'm sure.
+-
+I can't believe this you... Ok, fine you jump into the magma and feel pain beyond anything you've felt in the past. Its a mercy
+
+
+Desert
+-
+Title : The Desert
+Script : go to the desert
+-
+A very non-descript desert. Enterprising humans have occasionally tried to live here separate from the rest of humanity
+but establishing a kingdom or power structure would be near impossible. If you're looking for something to do,
+you could try exploring a bit.
+
+
+Explore the Desert
+-
+Title : The Desert
+Script : Explore the Desert
+-
+In the desert you find a married couple of nomad traders. In addition, there's an oasis you could visit to rest.
+
+
+Nomad traders
+-
+Title : Nomad traders
+Script : Trade with the Nomads
+-
+While you would like to trade with the merchants, it appears as though they are not ready to trade.
+
+
+Oasis
+-
+Script : Visit the oasis
+-
+You find your visit to the oasis to be extremely relaxing and leave feeling reinvigorated.
+
+
+Necromancer's Lair
+-
+Title : Necromancer's Lair
+Script : travel to the Necromancer's Lair
+-
+This is it, the domain of The Dark Lord: Master of Death, the strongest necromancer the world has seen. If you wish to face him and end his threat, you will need to get past
+his army.
+
+
+Enter the Lair
+-
+Title : Necromancer's Lair
+Script : travel to the Necromancer's Lair
+-
+As you attempt to enter the lair, a solitary zombie among his army notices you and starts shambling towards you. Initiate Combat
+
+
+Fight the Minions
+-
+Title : Necromancer's Fortress
+Script : Go to the necromancer's throne room
+-
+In front of the throne room door stands some abomination, a skeletal monster produced from countless skeletons mashed together. To pass, you must defeat it. Initiate combat
+
+
+Fight the Necromancer
+-
+Title : Necromancer's Throne Room
+Script : Enter the Throne Room
+-
+Atop a lavishly decorated throne sits a goblin wearing a black cloak with black shoes and a black wand. He launches into a tirade about how he's going to end the world and
+enslave humanity. Overall it's a pretty lackluster speech. It sounds both rehearsed and improvisational with the worst aspects of both.
+You really get the sense that he's not very good with words or people. After 30 minutes or so, he finally wraps it up and turns to engage you in combat.
+
+
+Tundra
+-
+Title : Tundra
+Script : Travel to the Tundra
+-
+The Tundra is a pretty lifeless place. You won't find much to do here.
+
+
+Vissing Empire
+-
+Title : The Vissing Empire
+Script : Travel to the Vissing Empire
+-
+The Vissing Empire has existed for a Millenia and used to dominate most of the Elder Lands. Since the the fey Pallene was killed,
+most of the land near the empire was made desolate, and the empire has been struggling since then. Recently, their situation became even worse when they
+lost control of the Great River during their war with the Azir Kingdom. Since then, their relationship with the Azir Kingdom has improved and, due to trade with the Azir, their economic situation has
+started to improve.
+
+
+Explore the Empire
+-
+Title : Vissing Empire
+Script : Explore the Empire
+-
+The only place of interest to you is the castle.
+
+
+Visit the Castle
+-
+Title : Vissing Empire Castle
+Script : Explore the Castle
+-
+The Castle is as impressive as you would imagine for a kingdom of this size. Everywhere you look, you find
+objects or paintings demonstrating the extravagence the inhabitants live with. How did you get inside the Castle
+by the way? This should only be open to the royal family and their personal guards. In response to this thought
+a guard nearby notices your presence and moves to block your path. Initiate combat
+
+
+Dead Forest
+-
+Title : The Dead Forest
+Script : Travel to the Dead Forest
+-
+The dead forest, once a thriving hub of life, now exists as a warning against hubris. Centuries ago, the forest's guardian Pallene was slain by a human warrior hoping to
+prove himself. His actions angered the land and since then the dead forest and its surrounding regions have been mostly devoid of life.
+
+
+Explore Dead Forest
+-
+Title : the Dead Forest
+Script : Explore the Dead Forest
+-
+Wandering through the forest you see a witch.
+
+
+Talk to witch
+-
+Title : The Dead Forest
+Script : Approach the witch.
+-
+The witch takes no mind of your presence only continuing to stare past you at a long dead tree stump.
+
+The Desolate Wasteland
+-
+Title : The Desolate Wasteland
+Script : Travel to the Desolate Wasteland
+-
+I'm going to be honest here, it's getting pretty late and I just want to wrap up the story part of the game. Can you just pretend that I gave you some
+description of why the Wasteland is the way that it is and go to one of the areas where I put in more work? Thanks. 

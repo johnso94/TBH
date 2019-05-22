@@ -1,0 +1,591 @@
+The Forest of Doubt { Foreground = Forest.png }                                                               
+    - 
+    Kevin text added here
+    The Forest of Doubt was once the epicentre of the great empire of Laipiviel. 
+    Laipiviel has long since fallen to ruin, however,
+    and the forest is now only inhabited by roving goblin warbands. 
+    What would you like to do?                            
+    -                                                               
+    Explore the Forest of Doubt  { Back = The Forest of Doubt , Foreground = Forest.png }
+        -
+        During some quick scouting, you notice some locations 
+        that might be of interest to you. There is a cave which may
+        house treasures of some sort. Nearby
+         there's a goblin camp you could farm for experience.
+        -                                                             
+        Cave     { Back = The Forest of Doubt , Foreground = Forest.png } 
+            -
+            You look through the cave for a while, but ultimately
+             you can't find anything worth keeping.
+            -                                                          
+        Goblin lair  { Back = The Forest of Doubt , Foreground = goblin-0.png}       
+            -
+            You have successfully lead a goblin away from the lair to fight it one-on-one. Enraged, the Goblin
+            charges towards you. Initiate Combat
+            -                                                 
+    ------------------------------------------------------                                   
+    @Azir                                               { }                
+    @The Iron Mountains                                 { }                              
+    @Jungle                                             { }                  
+    @Dead Battlefield                                   { }    
+    @Untouched Meadow                                   { }
+    @New loction {}
+    ------------------------------------------------------
+
+New location { Foreground = Forest.png }
+    -
+    Text for New location
+    -
+
+
+
+
+Untouched Meadow                                        {Foreground = Forest.png}         
+    -
+    You find a pleasant meadow 
+    somehow completely unspoiled by the outside.
+    -              
+    Explore the Untouched Meadow                        {Back = Untouched Meadow, Foreground = Forest.png}     
+        -
+        After a quick examination you find 
+        nothing that could explain this phenomenon.
+         Maybe if you waited, something would happen.
+        -                                  
+        Wait                                            {Back = Untouched Meadow, Foreground = Forest.png}     
+            -
+            After hours of waiting, night starts to fall and with it, 
+            you see fey-like being emerge from the underbrush. 
+            One of these beings notices you and readies a cruel blade. Initiate Combat
+            -                 
+    ------------------------------------------------------           
+    @Green Forest                                       {}                        
+    @River Valley                                       {}   
+    ------------------------------------------------------                                             
+
+
+River Valley                                            { Foreground = Farms.png }    
+    -
+    The River Valley houses the Great River, 
+    one of the largest inland rivers people know about. 
+    The runoff from the Great River has led to abundant, 
+    fertile lands in the neigboring regions and plays a
+     large role in the continued economic
+    sucess of the kingdom of Azir.
+    -
+    Explore the river valley                            {Back = River Valley, Foreground = Farms.png}    
+        -
+        In the valley you can find several farms and plantations that utilize the river. 
+        In addition, you could spend some time around the river and recuperate.
+        -                               
+        visit the farms                                 {Back = River Valley, Foreground = Farms.png}       
+            -
+            Overall the farmers don't know much that could be of use to you. 
+            Despite this, You learn of a meadow west here that people avoid 
+            for fear of beings that appear at nighttime.
+            -                      
+        rest by the river                               {Back = River Valley, Foreground = Farms.png}     
+            -
+            Overall, your rest was very relaxing and you 
+            find yourself feeling reinvigorated.
+            -         
+    ------------------------------------------------------                                     
+    @Grasslands                                         {}                      
+    @Farmlands                                          {}   
+    ------------------------------------------------------                                  
+
+
+Farmlands                                               {Foreground = Farms.png}                
+    -
+    The farms in this area benefit from their
+     proximity to the Great River and are fairly well off.
+    -
+    Find out information from the farmers               { Back = Farmlands, Foreground = Farms.png}     
+        -
+        The farmers are reluctant to open up to an outsider but you can glean from your interactions that something is going very wrong. Everyone is tense and suspicious and
+        everywhere you look you can see families grieving.
+        -                                           
+        Investigate the matter further                  { Back = Farmlands, Foreground = Farms.png }             
+            -
+            After questioning a couple of families you find a woman who's willing to discuss the matter with you. She tells you that cattle and livestock have been dissappearing for months
+            now but no one really paid attention to the issue until four days ago when many people, including her fiancée, started dissappearing at a frightening rate. She asks you
+            to bring him back or, at the very least, to avenge him.
+            -                                
+            Examine the dissappearings                  { Back = Farmlands, Foreground = Farms.png }     
+                -
+                Through examining where the people and animials have gone missing, you get a good idea of where the perpetrator is acting from. You track the culprit to a barn that was abandoned after
+                its residents were murdered and which the local farmers believe is haunted by their ghosts.    
+                -                                    
+                Examine the barn                        { Back = Farmlands, Foreground = Farms.png }    
+                    -
+                    As you step inside the barn, you see wisps coalesce and form the image of a ghostly family. The mother stares at you then points to the basement. With this,
+                    the wisps begin to fade.    
+                    -                               
+                    Go into the basement                { Back = Farmlands, Foreground = Vampire.png }    
+                        -
+                        When you open the basement door you are hit by the scent of iron. No ... it's blood. You ready yourself and descend the stairs finding a room littered with the husks of human Corpses.
+                        In the middle of the room is a vampire draining the blood from a young man You have no time to react before the vampire, in a frenzy, charges towards you, desperate for more blood. Initiate Combat                                       
+                        -
+    ------------------------------------------------------                        
+    @Azir                                               {}                
+    @Rich Grasslands                                    {}                           
+    @River Valley                                       {}     
+    ------------------------------------------------------               
+
+
+Rich Grasslands {Foreground = Plains.png}   
+    -
+    The Rich Grasslands are a relatively uninteresting area, if you look around you might find sometheing to do, but I doubt it.
+    -
+    Explore the rich grasslands { Foreground = Plains.png }          
+        -
+        You find runes scattered around the ground, seemingly in some sort of patter.
+        -                            
+        Runes { Script = Explore the Runes, Back = Rich Grasslands, Foreground = Plains.png }              
+            -
+            Upon exploring the area, you find a structure underground.
+            -   
+            Explore the structure { Back = Rich Grasslands, Foreground = Plains.png }    
+                -
+                As you look around the structure, you are continously ambushed by cultists and, while they're fairly easy to fend off, one
+                of them is able to complete a summoning ritual before you can kill him. The demon he summons stares at you for a second
+                before grinning and sauntering up to you. Initiate combat
+                -                                    
+    -           
+    ------------------------------------------------------                                     
+    @Non-descript Plains                                {}                               
+    @Uncharted Depths                                   {}                            
+    @Farmlands                                          {}   
+    ------------------------------------------------------
+
+
+The Iron Mountains                                      {Foreground = mountains.png}   
+    -
+    The Iron Mountains were once a bastion of Dwarven Culture in the human lands. Since the Exodus, however, they
+    now only serve as a reminder that dwarves once dwelt in these lands
+    -                      
+    Explore the Mountains                               { Back = The Iron Mountains, Foreground = mountains.png }      
+        -
+        Looking around there are two locations of interest to you: 
+        an Abandoned Mine and the Ruins of a Dwarven Fortress.
+        -                          
+        Abandoned Mine                                  { Back = The Iron Mountains, Foreground = Skeleton.png }  
+            -
+            While wandering the mine you encounter a pile of bones 
+            that rattles around before merging to create some skeleton monstrosity. Initiate Combat
+            -                           
+        Ruins of Dwarf Fortress                         { Back = The Iron Mountains, Foreground = mountains.png }     
+            -
+            It looks like treasure hunters have already
+            mostly picked the place clean, however, you do find enough gold to make it worth your while.
+            Initiate treasure
+            -            
+    -       
+    ------------------------------------------------------             
+    @The Forest of Doubt                                {}                               
+    @The Vising Empire                                  {}                             
+    @Dormant Volcano                                    {}                           
+    @Mountain Range                                     {}  
+    ------------------------------------------------------
+  
+
+
+
+Uncharted Depths                                        {Foreground = Canyon.png}     
+    -
+    The site of a great canyon through the Earth. The area is impossible to explore, hence the title Uncharted Depths.
+    -              
+    ------------------------------------------------------                      
+    @Wilderness                                         {}                      
+    @Rich Grasslands                                    {}    
+    ------------------------------------------------------
+
+                       
+Green Forest                                            {Foreground = Forest.png}               
+    -
+    A non-desceprit forest. Well, non-descript other than the fact that its green. If you want something to do, you can look around.
+    -    
+    wander around                                       { Back = Green Forest, Foreground = goblin-0.png }    
+        -
+        While looking around, you are ambushed by a goblin scout. Initiate combat.
+        -       
+    -------------------------------------------------------         
+    @Untouched Meadow                                   { }        
+    @Goblin Fortress                                    { }                          
+    @Grasslands                                         { }  
+    -------------------------------------------------------                   
+
+
+
+Grasslands                                              { Foreground = Plains.png }            
+    -
+    A set of grasslands near the River Valley. While the land is as abundant as the nearby Farmlands, the local animals make farming unfeasable.
+    -     
+    Go Hunting                                          { Back = Grasslands, Foreground = Plains.png  }           
+        -
+        You track down a wild boar. Initiate combat
+        -       
+    ------------------------------------------------------ 
+    @River Valley                                       {}                        
+    @Dead Battlefield                                   {}                            
+    @Azir                                               {}                
+    @Green Forest                                       {}   
+    ------------------------------------------------------
+
+
+
+Azir                                                    { Foreground = Castle.png}       
+    -
+    The Kingdom of Azir was founded by adventurers a little over a century ago. Since then it has risen
+    to prominence and is now one of the most powerful countries in the world.
+    -    
+    Explore the Kingdom                                 {Back = Azir, Foreground = Castle.png}            
+        -
+        In the Kingdom are many locations to explore but the one's which would hold the most interest to you,
+        as an adventurer are the Castle, the marketplace, and the sparring grounds.
+        -                  
+        The Castle                                      {Back = Azir, Foreground = Castle.png}         
+            -
+            The Castle is as impressive as you would imagine for a kingdom of this size. Everywhere you look, you find
+            objects or paintings demonstrating the extravagence the inhabitants live with. How did you get inside the Castle
+            by the way? This should only be open to the royal family and their personal guards. In response to this thought
+            a guard nearby notices your presence and moves to block your path. Initiate combat
+            -                                          
+    -               
+    ------------------------------------------------------          
+    @Farmlands                                          {}                     
+    @The Forest of Doubt                                {}                               
+    @Non-descript Plains                                {}                               
+    ------------------------------------------------------
+
+
+Non-descript Plains                                     {Foreground = Plains.png}     
+    -
+    What do you want here? It's in the name: nondescript. There's absolutely nothing here.
+    -                                                       
+        Runes2                                      { Back = Non-descript Plains, Foreground = Plains.png }          
+            -
+            Upon exploring the area, you find a structure underground.
+            -
+                Explore the structure2                  { Back = Non-descript Plains, Foreground = Plains.png }          
+                    -
+                    As you look around the structure, you are continuously ambushed by cutlists and, while they're fairly easy to fend off, one
+                    of them is able to complete a summoning ritual before you can kill him. The demon he summons stares at you for a second
+                    before grinning and sauntering up to you. Initiate combat
+                    -                                   
+    -                 
+    ------------------------------------------------------          
+    @Rich Grasslands                                    {}                           
+    @Jungle                                             {}                  
+    @Wilderness                                         {}                      
+    @Azir                                               {}   
+    ------------------------------------------------------
+
+
+
+
+Wilderness                                              { Foreground = Forest.png }         
+        -
+        Here, there's nothing but wilderness. Now and then, people have tried to inhabit these lands but every time, they find that the Wilderness absolutely refuses to be tamed.
+        -        
+    Go and Hunt                                         { Back = Wilderness, Foreground = Forest.png }   
+        -
+        While you move through the area looking for quarry, you quickly find that you are the hunted as an allosaurus leaps from the underbrush at you. Initiate combat.
+        -          
+    ------------------------------------------------------       
+    @Uncharted Depths                                   {}                            
+    @Savanna                                            {}                                      
+    @Non-descript Plains                                {} 
+    ------------------------------------------------------ 
+
+
+
+
+Goblin Fortress                                         {Foreground = Castle.png}        
+    -
+    This is a goblin fortress a bastion for goblins 
+    from which they can lauch raids on their neighbors.
+    If you were to successfully kill a goblin warlords there, it would
+    prevent the goblins from carrying out any attacks in the near future.
+    -              
+    Expamine the Goblin Fortress                        { Back = Goblin Fortress, Foreground = Castle.png }     
+        -
+        Through examining where the people and animials 
+        have gone missing, you get a good idea of where 
+        the perpetrator is acting from. You track the 
+        culprit to a barn that was abandoned after
+        its residents were murdered and which the local
+         farmers believe is haunted by their ghosts.
+        -                                  
+        Goblin Warrior                                  { Back = Goblin Fortress, Foreground = goblin-0.png }    
+            -
+            As the goblin spots you moving towards it, 
+            it lets out a warcry and charges you. Initiate Combat
+            -                         
+        Goblin Warlord                                  { Back = Goblin Fortress, Foreground = goblin-0.png }      
+            -
+            You successfully sneak into the camp and find a warlord in its office, going over plans for an attack on Azir. Initiate combat
+            -        
+    ------------------------------------------------------             
+    @Green Forest                                       {}                        
+    @The Great Expanse                                  {}                             
+    @Dead Battlefield                                   {}                             
+    ------------------------------------------------------    
+
+
+
+
+Dead Battlefield                                        { Foreground = deadforest.png}          
+    -
+    Decades ago, when the kingdom and Azir and the Vising were at war, 
+    this site served as the penultimate battlefield.
+    Even now, corpses still litter the ground and people
+    frequently report seeing things shambling around in the area.
+    -             
+    Explore the Battlefield                             {Back = Dead Battlefield, Foreground = deadforest.png}      
+        -
+        While looking around you see a zombie collecting 
+        corpses and putting them into a sled. 
+        It is probably collecting corpses for a necromancer to work with.
+        -                            
+        kill the zombie                                 { Back = Dead Battlefield, Foreground = Zombie.png }      
+            -
+            The zombie looks up at you as you approach it. Implement combat
+            -      
+    ------------------------------------------------------                                              
+    @Grasslands                                         {}                      
+    @Mountain Range                                     {}                          
+    @The Forest of Doubt                                {}                           
+    @Goblin Fortress                                    {}  
+    ------------------------------------------------------      
+
+
+
+
+Jungle                                                  { Foreground = Forest.png}         
+    -
+    A jungle which has grown up over the years. For some reason, you think that you can find an abandoned temple in the area.
+    -
+    Explore Jungle                                      { Back = Jungle, Foreground = Forest.png }         
+        -
+        -                
+        look for temple                                 { Back = Jungle, Foreground = Forest.png }    
+            -
+            -                                            
+            loot temple                                 {Back = Jungle, Foreground = Forest.png}           
+                -
+                As expected, you find some treasure but accidently trigger a dart trap on your way out.
+                -                   
+    -   
+    ------------------------------------------------------                       
+    @Non-descript Plains                                {}                               
+    @Dormant Volcano                                    {}                           
+    @Savanna                                            {}                   
+    @The Forest of Doubt                                {}  
+    ------------------------------------------------------    
+
+
+
+Savanna                                                 {Foreground = Canyon.png}     
+    -
+    A Savanna in the middle of nowhere. There is nothing to do here.
+    -         
+    Explore the Savanna                                 { Back = Savanna, Foreground = Canyon.png }     
+        -
+        -                         
+        Runes3                                          { Back = Savanna, Foreground = Canyon.png }      
+            -
+            Upon exploring the area, you find a structure underground.
+                -               
+                Explore the structure3                   { Back = Savanna, Foreground = Demon.png}                                         
+                    -
+                    As you look around the structure, you are continously ambushed by cutlists and, while they're fairly easy to fend off, one
+                    of them is able to complete a summoning ritual before you can kill him. The demon he summons stares at you for a second
+                    before grinning and sauntering up to you. Initiate combat                   
+                    -
+    ------------------------------------------------------ 
+    @Wilderness                                         {}                      
+    @Desert                                             {}                                     
+    @Jungle                                             {}  
+    ------------------------------------------------------ 
+
+
+
+
+The Great Expanse                                       { Title = The title , Foreground = mountains.png}      
+    -
+    Added this text to the great expanse
+    The Great Expanse stands as the no-mans-land separating the goblin armies and the necromancer "The Dark Lord: Master of Death". All over the place, you can see signs of battle,
+    yet no corpses.
+    -                  
+    @Goblin Fortress                                    {}                           
+    @Necromancer's Lair                                 {}                              
+    @Mountain Range                                     {}                          
+
+
+
+Mountain Range                                          { Foreground = mountains.png }       
+    -
+    An unremarkable range of mountains. Near where you stand is a mine you could explore.
+    -              
+    Abandoned Mine2                                     { Script = Abandoned Mine , Back = Mountain Range, Foreground = Skeleton.png }   
+        -
+        While wandering the mine you encounter a pile of bones that rattles around before merging to create some skeleton monstrosity. Initiate Combat
+        -   
+    This is another Abonded mine { Back = Dead Battlefield ,  Foreground = Skeleton.png }
+        -
+        Text for this place
+        -                    
+    @Dead Battlefield                                   {}                            
+    @Tundra                                             {}                  
+    @Iron Mountains                                     {}                          
+    @The Great Expanse                                  {}    
+
+
+
+ ///////////////////////////
+ // FROM THIS PLACE ON X //
+ ///////////////////////////
+
+
+Dormant Volcano                                         { Foreground = mountains.png}      
+    -
+    A dormant volcano. Looking around, it seems like there's a crack you could travel through to inside the volcano
+    -                
+    Enter Dormant Volcano                               { Back = Dormant Volcano, Foreground = mountains.png }        
+        -
+        From here you can see the magma that remains under the cooled surface. You're still a distance away from any magma yet your skin feels as though it's on fire and your throat burns.
+        -                        
+        jump in                                         { Back = Dormant Volcano, Foreground = mountains.png }      
+        -
+            Wait, what! You undertand this is magma. Even where you are standing, continued exposure
+            will mess with your body. Do you really want to do this despite knowing that you'll surely die.
+        -                
+            are you sure                                {}    
+                -
+                I can't believe this you... Ok, fine. You jump into the magma and feel pain beyond anything you've felt in the past. Its a mercy that you die quickly. You regret your choice immediately.
+                -
+    ------------------------------------------------------                                                        
+    @Jungle                                             {}                  
+    @Dead Forest                                        {}                       
+    @Desert                                             {}                  
+    @Iron Mountains                                     {}   
+    ------------------------------------------------------    
+
+
+Desert                                                  { Foreground = Desert.png}             
+    -
+    A very non-descript desert. Enterprising humans have occasionally tried to live here separate from the rest of humanity
+    but establishing a kingdom or power structure would be near impossible. If you're looking for something to do,
+    you could try exploring a bit.
+    -
+    Explore the Desert                                  {Back = Desert, Foreground = Desert.png}           
+        -
+        In the desert you find a married couple of nomad traders. In addition, there's an oasis you could visit to rest.
+        -                  
+        Nomad Traders                                   {Back = Desert, Foreground = Desert.png}     
+            -
+            While you would like to trade with the merchants, it appears as though they are not ready to trade.
+            -                       
+        Oasis                                           {Back = Desert, Foreground = Desert.png}           
+            -
+            You find your visit to the oasis to be extremely relaxing and leave feeling reinvigorated.
+            - 
+    ------------------------------------------------------           
+    @Savanna                                            {}                   
+    @Desolate Wasteland                                 {}                                                  
+    @Dormant Volcano                                    {}      
+    ------------------------------------------------------    
+
+
+Necromancer's Lair                                      {Foreground = deadforest.png }    
+    -
+    This is it, the domain of The Dark Lord: Master of Death, the strongest necromancer the world has seen. If you wish to face him and end his threat, you will need to get past
+    his army.
+    -                     
+    Enter the Lair                                      { Script = Script for Enter the Lair , Back = Necromancer's Lair, Foreground = Zombie.png}    
+        -
+        As you attempt to enter the lair, a solitary zombie among his army notices you and starts shambling towards you. Initiate Combat
+        -                     
+        Fight the Minions                               { Back = Necromancer's Lair, Foreground = Skeleton.png}           
+            -
+            In front of the throne room door stands some abomination, a skeletal monster produced from countless skeletons mashed together. To pass, you must defeat it. Initiate combat
+            -                     
+            Fight the Necromancer                       { Back = Necromancer's Lair, Foreground = necromancer.png}
+                -
+                Atop a lavishly decorated throne sits a goblin wearing a blue cloak. He launches into a tirade about how he's going to end the world and enslave humanity, though he doesn't explain how he can do both. Overall it's a pretty lackluster speech. It sounds both rehearsed and improvisational with the worst aspects of both. You really get the sense that he's not very good with words or people. After 30 minutes or so, he finally wraps it up and turns to engage you in combat.
+                -
+    ------------------------------------------------------                             
+    @The Great Expanse                                  {}                                                         
+    @Tundra                                             {}                  
+    ------------------------------------------------------   
+
+
+
+Tundra                                                  {}         
+    -
+    The Tundra is a pretty lifeless place. You won't find much to do here.
+    -
+    ------------------------------------------------------       
+    @Mountain Range                                     {}                                           
+    @Vising Empire                                      {}                         
+    @Necromancer's Lair                                 {}   
+    ------------------------------------------------------    
+
+
+Vissing Empire                                          { Foreground = Castle.png }    
+    -
+    The Vissing Empire has existed for a Millenia and used to dominate most of the Elder Lands. Since the the fey Pallene was killed,
+    most of the land near the empire was made desolate, and the empire has been struggling since then. Recently, their situation became even worse when they
+    lost control of the Great River during their war with the Azir Kingdom. Since then, their relationship with the Azir Kingdom has improved and, due to trade with the Azir, their economic situation has
+    started to improve.
+    -                 
+    Explore the Empire                                  { Back = Vissing Empire, Foreground = Castle.png }             
+        -
+        The only place of interest to you is the castle.
+        -                
+        Visit the Castle                                {Back = Vissing Empire, Foreground = Castle.png}       
+            -
+            The Castle is as impressive as you would imagine for a kingdom of this size. Everywhere you look, you find
+            objects or paintings demonstrating the extravagence the inhabitants live with. How did you get inside the Castle
+            by the way? This should only be open to the royal family and their personal guards. In response to this thought
+            a guard nearby notices your presence and moves to block your path. Initiate combat
+            -                               
+    ------------------------------------------------------                      
+    @Iron Mountains                                     {}                                                
+    @Dead Forest                                        {}                       
+    @Tundra                                             {}   
+    ------------------------------------------------------    
+
+Dead Forest                                             { Foreground = deadforest.png}      
+    -
+    The dead forest, once a thriving hub of life, now exists as a warning against hubris. Centuries ago, the forest's guardian Pallene was slain by a human warrior hoping to
+    prove himself. His actions angered the land and since then the dead forest and its surrounding regions have been mostly devoid of life.
+    -            
+    Explore Dead Forest                                 { Back = Dead Forest, Foreground = deadforest.png }     
+        -
+        Wandering through the forest you see a witch.
+        -                         
+        talk to witch                                   {Back = Dead Forest, Foreground = deadforest.png}    
+            -
+            The witch takes no mind of your presence only continuing to stare past you at a long dead tree stump.
+            -                                           
+    ------------------------------------------------------                        
+    @Dormant Volcano                                    {}                                                
+    @Desolate Empire                                    {}                           
+    @Vising Empire                                      {}    
+    ------------------------------------------------------ 
+
+
+
+Desolate Wasteland                                      {}            
+    -
+    I'm going to be honest here, it's getting pretty late and I just want to wrap up the story part of the game. Can you just pretend that I gave you some
+    description of why the Wasteland is the way that it is and go to one of the areas where I put in more work? Thanks. 
+    -    
+    ------------------------------------------------------        
+    @Desert                                             {}                                      
+    @Dead Forest                                        {}    
+    ------------------------------------------------------  
+
+
+
