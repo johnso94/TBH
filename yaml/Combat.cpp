@@ -11,7 +11,7 @@ void round(PC &player, Enemy &monster, string is, Inventory &inv)
     map<string, int> actions;
     vector<string> commands;
     fill_map(actions);
-
+    mem[100] = '\0';
     if (actions.find(is) == actions.end())
     {
         cout << player.named() << " does not know how to " << is << endl;
